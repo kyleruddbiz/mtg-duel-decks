@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1fe9e819b8db74ea964982d8c33ef6, type: 3}
+  m_Name: Niv-MizzetParun
+  m_EditorClassIdentifier: 
+  <CardImages>k__BackingField:
+  - {fileID: -218969803226657820, guid: f24ef38a88178ed428341ffe176d29b5, type: 3}
+  - {fileID: 5501498291759326193, guid: cab3baa6243e2274ea14653fcc8cc6a9, type: 3}
+  - {fileID: 4652294795180552462, guid: 14c9579ed43c0224cb861ed2cdf56c2c, type: 3}
