@@ -12,5 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92346288e19078740903bac63c8795a7, type: 3}
   m_Name: Warlocks
   m_EditorClassIdentifier: 
+  deckName: Warlocks
   sleeveImages:
-  - {fileID: 0}
+  - {fileID: 7796798138125073859, guid: 682a5c5aa644d6a4c86ad8e25c8b0c30, type: 3}
+  - {fileID: -2583285059983354769, guid: 5bc8fb49d7c72aa48a63397b03ba5b60, type: 3}
+  - {fileID: 6375721875540342036, guid: 174edef53b108d3488b2aca9e60ccc21, type: 3}
+  - {fileID: 3284380147641973814, guid: 5bfe4a93150a44a4cbe7daf6e81c0ff4, type: 3}
+  - {fileID: 6883152743008334315, guid: 4faebb49cb4c3e740ba38aa147089ae0, type: 3}
+  - {fileID: 1744433999985264358, guid: 5de69612983e6564387e853fbceaae0b, type: 3}
+  - {fileID: 5396117502893913438, guid: 73b73926c08f28c44ab495c395260511, type: 3}
+  - {fileID: 1346344339989332045, guid: 00bc1e0ca7787ea4380d0e3806931425, type: 3}
+  cardSets:
+  - cardData: {fileID: 11400000, guid: 5e641d7af8811f04489cbaeb95768301, type: 2}
+    count: 2
