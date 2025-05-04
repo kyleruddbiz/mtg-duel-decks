@@ -13,8 +13,8 @@ namespace VoidScribe.MtgDuelDecks
     [CreateAssetMenu(fileName = "NewDeck", menuName = "Data/Deck")]
     public class DeckData : ScriptableObject
     {
+        [SerializeField] private string deckName;
         [SerializeField] private Sprite[] sleeveImages;
-
         [SerializeField] private List<CardSet> cardSets;
     }
 }
