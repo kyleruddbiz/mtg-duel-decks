@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 051a682ec0a996542abe00b690c7fb9e
+guid: 879f303015d422a4ab3b8feb212d9f5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8761070720555084189
-    second: Warlocks Card Back 8_0
+      213: -1649443092478433773
+    second: Wizards Sleeve 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Warlocks Card Back 8_0
+      name: Wizards Sleeve 3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d99e2c6f663959970800000000000000
-      internalID: 8761070720555084189
+      spriteID: 316e99b1f300c19e0800000000000000
+      internalID: -1649443092478433773
       vertices: []
       indices: 
       edges: []

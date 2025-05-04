@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
-    [CreateAssetMenu(fileName = "Card", menuName = "Data/Cards")]
+    [CreateAssetMenu(fileName = "NewCard", menuName = "Data/Card")]
     public class CardData : ScriptableObject
     {
         // Cost

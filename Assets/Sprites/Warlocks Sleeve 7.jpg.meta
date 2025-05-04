@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8afc93e971ff1c147bd15305d2cadb0a
+guid: 73b73926c08f28c44ab495c395260511
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4810285016673587016
-    second: Warlocks Card Back 7_0
+      213: 5396117502893913438
+    second: Warlocks Sleeve 7_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Warlocks Card Back 7_0
+      name: Warlocks Sleeve 7_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b079c8634f6e3db0800000000000000
-      internalID: -4810285016673587016
+      spriteID: e55724e674cd2ea40800000000000000
+      internalID: 5396117502893913438
       vertices: []
       indices: 
       edges: []
