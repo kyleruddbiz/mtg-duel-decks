@@ -23,7 +23,7 @@ namespace VoidScribe.MtgDuelDecks
         private void Update()
         {
             // TODO Delete
-            UpdateVisual();
+            //UpdateVisual();
         }
 
         private void UpdateVisual()
@@ -33,6 +33,20 @@ namespace VoidScribe.MtgDuelDecks
                 cards[i].transform.SetParent(cardsDisplay);
                 cards[i].transform.localPosition = new Vector3(horizontalOffset * i, 0, -(.01f * i));
             }
+        }
+
+        public void AddCard(Card card)
+        {
+            cards.Add(card);
+
+            UpdateVisual();
+        }
+
+        public void RemoveCard(Card card)
+        {
+            cards.Remove(card);
+
+            UpdateVisual();
         }
     }
 }
