@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
+    /// <summary>
+    /// This will be the random collector of a bunch of logic as I'm playing around with stuff.
+    /// I'll split it into smaller pieces as I understand things better.
+    /// </summary>
     [CreateAssetMenu(fileName = "GameManager", menuName = "Managers/GameManager")]
     public class GameManager : ScriptableObject
     {
@@ -20,17 +24,8 @@ namespace VoidScribe.MtgDuelDecks
         {
             InitializeDeck();
 
-            //Card cardToMove = deckZoneRuntimeSet.Cards[2];
-            //deckZoneRuntimeSet.RemoveCard(cardToMove);
-            //handZoneRuntimeSet.AddCard(cardToMove);
-
-            //cardToMove = deckZoneRuntimeSet.Cards[3 - 1];
-            //deckZoneRuntimeSet.RemoveCard(cardToMove);
-            //handZoneRuntimeSet.AddCard(cardToMove);
-
-            //cardToMove = deckZoneRuntimeSet.Cards[6 - 2];
-            //deckZoneRuntimeSet.RemoveCard(cardToMove);
-            //handZoneRuntimeSet.AddCard(cardToMove);
+            deckZoneRuntimeSet.Cards[0].MoveToZone(handZoneRuntimeSet);
+            deckZoneRuntimeSet.Cards[0].MoveToZone(handZoneRuntimeSet);
         }
 
         private void InitializeDeck()

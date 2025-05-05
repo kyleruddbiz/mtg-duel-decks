@@ -11,6 +11,8 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeField] private int imageIndex;
         [SerializeField] private CardData cardData;
 
+        public ZoneRuntimeSet CurrentZone { get; set; }
+
         private void Awake()
         {
             UpdateVisual();
@@ -30,6 +32,11 @@ namespace VoidScribe.MtgDuelDecks
                     throw new System.ArgumentException("Image index is out of bounds for card data.");
                 }
             }
+        }
+
+        public void MoveToZone(ZoneRuntimeSet destinationZone)
+        {
+            ZoneRuntimeSet.MoveCard(this, destinationZone);
         }
 
         public void Initialize(CardData cardData, int imageIndex)

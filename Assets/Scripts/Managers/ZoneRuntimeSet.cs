@@ -13,9 +13,17 @@ namespace VoidScribe.MtgDuelDecks
         private readonly List<Card> cards = new();
         public IReadOnlyList<Card> Cards => cards;
 
+        public static void MoveCard(Card card, ZoneRuntimeSet destinationZone)
+        {
+            card.CurrentZone.RemoveCard(card);
+
+            destinationZone.AddCard(card);
+        }
+
         public void AddCard(Card card)
         {
             cards.Add(card);
+            card.CurrentZone = this;
 
             CardAdded?.Invoke(card);
         }
@@ -23,6 +31,7 @@ namespace VoidScribe.MtgDuelDecks
         public void RemoveCard(Card card)
         {
             cards.Remove(card);
+            card.CurrentZone = null;
 
             CardRemoved?.Invoke(card);
         }
