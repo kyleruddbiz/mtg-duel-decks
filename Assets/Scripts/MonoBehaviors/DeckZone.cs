@@ -22,7 +22,7 @@ namespace VoidScribe.MtgDuelDecks
 
                     card.Initialize(cardSet.CardData, imageIndex: i);
 
-                    AddCard(card);
+                    //AddCard(card);
                 }
             }
         }

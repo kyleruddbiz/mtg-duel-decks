@@ -7,10 +7,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fbc8db10db52b14ba59ada466920ec7, type: 3}
-  m_Name: TestDeckManager
+  m_Script: {fileID: 11500000, guid: b44153361c07dd6488fa5331d98e89f0, type: 3}
+  m_Name: NameLaterManager
   m_EditorClassIdentifier: 
-  deckZone: {fileID: 0}
+  cardPrefab: {fileID: 8212766563191543443, guid: 6a90ac5e2871d7a4c9bd8f8bd93e2a59, type: 3}
   deckData: {fileID: 11400000, guid: 786d3a2dd985be5458506c3ab52e3951, type: 2}
+  deckZoneManager: {fileID: 11400000, guid: b44348ee0fc9a6a4184bc27c4b27b986, type: 2}
