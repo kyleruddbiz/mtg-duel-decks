@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3d1b2ae37de16e47bf5f75d932f539e, type: 3}
-  m_Name: DeckZoneManager
+  m_Name: DeckZoneRuntimeSet
   m_EditorClassIdentifier: 

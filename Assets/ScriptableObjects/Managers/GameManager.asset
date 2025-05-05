@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b44153361c07dd6488fa5331d98e89f0, type: 3}
-  m_Name: NameLaterManager
+  m_Name: GameManager
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 8212766563191543443, guid: 6a90ac5e2871d7a4c9bd8f8bd93e2a59, type: 3}
   deckData: {fileID: 11400000, guid: 786d3a2dd985be5458506c3ab52e3951, type: 2}
-  deckZoneManager: {fileID: 11400000, guid: b44348ee0fc9a6a4184bc27c4b27b986, type: 2}
+  deckZoneRuntimeSet: {fileID: 11400000, guid: bcb35c83eb54a5944ae4f8f594278cdc, type: 2}

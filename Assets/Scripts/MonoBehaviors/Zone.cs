@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -14,28 +12,25 @@ namespace VoidScribe.MtgDuelDecks
         [Header(HeaderConstants.Fields)]
         [SerializeField] private string zoneName;
         [SerializeField] private float horizontalOffset;
-        [SerializeField] private ZoneManager zoneManager;
+        [SerializeField] private ZoneRuntimeSet zoneRuntimeSet;
 
         public void Awake()
         {
             zoneNameText.text = zoneName;
-        }
 
-        private void Start()
-        {
-            if (zoneManager != null)
+            if (zoneRuntimeSet != null)
             {
-                zoneManager.CardAdded += OnCardAdded;
-                zoneManager.CardRemoved += OnCardRemoved;
+                zoneRuntimeSet.CardAdded += OnCardAdded;
+                zoneRuntimeSet.CardRemoved += OnCardRemoved;
             }
         }
 
         private void OnDestroy()
         {
-            if (zoneManager != null)
+            if (zoneRuntimeSet != null)
             {
-                zoneManager.CardAdded -= OnCardAdded;
-                zoneManager.CardRemoved -= OnCardRemoved;
+                zoneRuntimeSet.CardAdded -= OnCardAdded;
+                zoneRuntimeSet.CardRemoved -= OnCardRemoved;
             }
         }
 
@@ -51,11 +46,11 @@ namespace VoidScribe.MtgDuelDecks
 
         private void UpdateVisual()
         {
-            for (int i = 0; i < zoneManager.Cards.Count; i++)
+            for (int i = 0; i < zoneRuntimeSet.Cards.Count; i++)
             {
-                Debug.Log("UPdate viss " + zoneManager.Cards[i].name);
+                //Debug.Log("UPdate viss " + zoneRuntimeSet.Cards[i].name);
 
-                Card card = zoneManager.Cards[i];
+                Card card = zoneRuntimeSet.Cards[i];
 
                 card.transform.SetParent(cardsDisplay);
                 card.transform.localPosition = new Vector3(horizontalOffset * i, 0, -(.01f * i));

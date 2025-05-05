@@ -4,7 +4,7 @@ namespace VoidScribe.MtgDuelDecks
 {
     public class ManagerLoader : MonoBehaviour
     {
-        [SerializeField] private NameLaterManager nameLaterManager;
+        [SerializeField] private GameManager nameLaterManager;
 
         private void Awake()
         {

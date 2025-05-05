@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
-    [CreateAssetMenu(fileName = "ZoneManager", menuName = "Managers/ZoneManager")]
-    public class ZoneManager : ScriptableObject
+    [CreateAssetMenu(fileName = "ZoneRuntimeSet", menuName = "RuntimeSets/ZoneRuntimeSet")]
+    public class ZoneRuntimeSet : ScriptableObject
     {
         public event Action<Card> CardAdded;
         public event Action<Card> CardRemoved;
