@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92346288e19078740903bac63c8795a7, type: 3}
-  m_Name: Wizards
+  m_Script: {fileID: 11500000, guid: 6fbc8db10db52b14ba59ada466920ec7, type: 3}
+  m_Name: TestDeckManager
   m_EditorClassIdentifier: 
-  <DeckName>k__BackingField: Wizards
-  <SleeveImages>k__BackingField: []
-  <CardSets>k__BackingField: []
+  deckZone: {fileID: 0}
+  deckData: {fileID: 11400000, guid: 786d3a2dd985be5458506c3ab52e3951, type: 2}

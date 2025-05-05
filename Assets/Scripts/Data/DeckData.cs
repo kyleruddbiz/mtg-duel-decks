@@ -6,15 +6,15 @@ namespace VoidScribe.MtgDuelDecks
     [System.Serializable]
     public class CardSet
     {
-        [SerializeField] private CardData cardData;
-        [SerializeField] private int count;
+        [field: SerializeField] public CardData CardData { get; private set; }
+        [field: SerializeField] public int Count { get; private set; }
     }
 
     [CreateAssetMenu(fileName = "NewDeck", menuName = "Data/Deck")]
     public class DeckData : ScriptableObject
     {
-        [SerializeField] private string deckName;
-        [SerializeField] private Sprite[] sleeveImages;
-        [SerializeField] private List<CardSet> cardSets;
+        [field: SerializeField] public string DeckName { get; private set; }
+        [field: SerializeField] public Sprite[] SleeveImages { get; private set; }
+        [field: SerializeField] public List<CardSet> CardSets { get; private set; }
     }
 }

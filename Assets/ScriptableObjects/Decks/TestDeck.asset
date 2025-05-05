@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92346288e19078740903bac63c8795a7, type: 3}
-  m_Name: Wizards
+  m_Name: TestDeck
   m_EditorClassIdentifier: 
-  <DeckName>k__BackingField: Wizards
-  <SleeveImages>k__BackingField: []
-  <CardSets>k__BackingField: []
+  <DeckName>k__BackingField: Test Deck
+  <SleeveImages>k__BackingField:
+  - {fileID: 7796798138125073859, guid: 682a5c5aa644d6a4c86ad8e25c8b0c30, type: 3}
+  <CardSets>k__BackingField:
+  - <CardData>k__BackingField: {fileID: 11400000, guid: e5309deade466c5429baa4b022bf6372, type: 2}
+    <Count>k__BackingField: 3

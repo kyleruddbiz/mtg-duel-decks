@@ -4,13 +4,13 @@ namespace VoidScribe.MtgDuelDecks
 {
     public class Card : MonoBehaviour
     {
+        [SerializeField] private SpriteRenderer visual;
         [SerializeField] private int imageIndex;
         [SerializeField] private CardData cardData;
-        [SerializeField] private SpriteRenderer visual;
 
         private void Awake()
         {
-            visual.sprite = cardData.CardImages[imageIndex];
+            UpdateVisual();
         }
 
         private void OnValidate()
@@ -27,6 +27,24 @@ namespace VoidScribe.MtgDuelDecks
                     throw new System.ArgumentException("Image index is out of bounds for card data.");
                 }
             }
+        }
+
+        public void Initialize(CardData cardData, int imageIndex)
+        {
+            this.cardData = cardData;
+            this.imageIndex = imageIndex;
+
+            UpdateVisual();
+        }
+
+        private void UpdateVisual()
+        {
+            if (cardData == null)
+            {
+                return;
+            }
+
+            visual.sprite = cardData.CardImages[imageIndex];
         }
     }
 }
