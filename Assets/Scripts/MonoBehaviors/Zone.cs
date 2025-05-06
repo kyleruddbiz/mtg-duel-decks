@@ -14,8 +14,6 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeField] private float horizontalOffset;
         [SerializeField] private ZoneRuntimeSet zoneRuntimeSet;
 
-        private bool needsUpdate = false;
-
         public void Awake()
         {
             zoneNameText.text = zoneName;
@@ -24,15 +22,6 @@ namespace VoidScribe.MtgDuelDecks
             {
                 zoneRuntimeSet.CardAdded += OnCardAdded;
                 zoneRuntimeSet.CardRemoved += OnCardRemoved;
-            }
-        }
-
-        private void Update()
-        {
-            if (needsUpdate)
-            {
-                needsUpdate = false;
-                UpdateVisual();
             }
         }
 
@@ -47,12 +36,12 @@ namespace VoidScribe.MtgDuelDecks
 
         private void OnCardAdded(Card card)
         {
-            needsUpdate = true;
+            UpdateVisual();
         }
 
         private void OnCardRemoved(Card card)
         {
-            needsUpdate = true;
+            UpdateVisual();
         }
 
         private void UpdateVisual()
