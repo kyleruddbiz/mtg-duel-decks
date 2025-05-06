@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 305224692841724488, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
       propertyPath: horizontalOffset
-      value: 0.2
+      value: 0.195
       objectReference: {fileID: 0}
     - target: {fileID: 305224692841724488, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
       propertyPath: 'cards.Array.data[0]'
@@ -769,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 305224692841724488, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
       propertyPath: horizontalOffset
-      value: 0.13
+      value: 0.195
       objectReference: {fileID: 0}
     - target: {fileID: 305224692841724488, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
       propertyPath: 'cards.Array.data[0]'

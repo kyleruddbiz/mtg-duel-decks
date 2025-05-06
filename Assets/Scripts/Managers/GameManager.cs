@@ -54,7 +54,7 @@ namespace VoidScribe.MtgDuelDecks
         {
             state = State.Dealing;
 
-            int maxCards = System.Math.Min(deckZoneRuntimeSet.Cards.Count, 7);
+            int maxCards = System.Math.Min(deckZoneRuntimeSet.Cards.Count, 5);
 
             for (int i = 0; i < maxCards; i++)
             {
