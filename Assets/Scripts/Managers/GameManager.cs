@@ -14,6 +14,8 @@ namespace VoidScribe.MtgDuelDecks
             Gaming
         }
 
+        public static GameManager Instance { get; private set; }
+
         [SerializeField] private Card cardPrefab;
         [SerializeField] private DeckData deckData;
 
@@ -25,6 +27,20 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeField] private ZoneRuntimeSet handZoneRuntimeSet;
 
         private State state = State.ReadyToDeal;
+
+        private void Awake()
+        {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            else
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+        }
 
         private void Start()
         {

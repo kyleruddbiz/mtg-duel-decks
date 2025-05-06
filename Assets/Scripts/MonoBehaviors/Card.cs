@@ -36,12 +36,16 @@ namespace VoidScribe.MtgDuelDecks
 
         private void OnMouseOver()
         {
-            Debug.Log("Mouse over - " + ToString());
+            //Debug.Log("Mouse over - " + ToString());
         }
 
         private void OnMouseDown()
         {
-            Debug.Log("Mouse down - " + ToString());
+            //Debug.Log("Mouse down - " + ToString());
+        }
+
+        private void OnMouseUp()
+        {
         }
 
         public void MoveToZone(ZoneRuntimeSet destinationZone)
