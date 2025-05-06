@@ -54,21 +54,26 @@ namespace VoidScribe.MtgDuelDecks
         {
             state = State.Dealing;
 
-            yield return new WaitForSeconds(1f);
+            int maxCards = System.Math.Min(deckZoneRuntimeSet.Cards.Count, 7);
 
-            deckZoneRuntimeSet.Cards[0].MoveToZone(handZoneRuntimeSet);
-
-            yield return new WaitForSeconds(1f);
-
-            deckZoneRuntimeSet.Cards[0].MoveToZone(handZoneRuntimeSet);
-
-            yield return new WaitForSeconds(1f);
-
-            deckZoneRuntimeSet.Cards[0].MoveToZone(handZoneRuntimeSet);
+            for (int i = 0; i < maxCards; i++)
+            {
+                yield return new WaitForSeconds(.5f);
+                Move();
+            }
 
             yield return new WaitForSeconds(1f);
 
             state = State.ReadyToGame;
+
+            void Move()
+            {
+                Card card = deckZoneRuntimeSet.Cards[0];
+
+                Debug.Log($"Moving {card} to hand zone");
+
+                card.MoveToZone(handZoneRuntimeSet);
+            }
         }
 
         private void InitializeDeck()
@@ -82,8 +87,15 @@ namespace VoidScribe.MtgDuelDecks
                     Card card = Instantiate(cardPrefab);
                     card.Initialize(cardSet.CardData, imageIndex: i);
 
-                    int insertIndex = Random.Range(0, cards.Count);
-                    cards.Insert(insertIndex, card);
+                    if (cards.Count == 0)
+                    {
+                        cards.Add(card);
+                    }
+                    else
+                    {
+                        int insertIndex = Random.Range(0, cards.Count);
+                        cards.Insert(insertIndex, card);
+                    }
                 }
             }
 

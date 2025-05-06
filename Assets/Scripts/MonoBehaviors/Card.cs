@@ -56,5 +56,10 @@ namespace VoidScribe.MtgDuelDecks
 
             visual.sprite = cardData.CardImages[imageIndex];
         }
+
+        public override string ToString()
+        {
+            return $"{cardData.name} ({imageIndex})";
+        }
     }
 }
