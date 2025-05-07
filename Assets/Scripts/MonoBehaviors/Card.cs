@@ -46,6 +46,10 @@ namespace VoidScribe.MtgDuelDecks
 
         private void OnMouseUp()
         {
+            foreach (Command command in cardData.Commands)
+            {
+                command.Execute(this);
+            }
         }
 
         public void MoveToZone(ZoneRuntimeSet destinationZone)

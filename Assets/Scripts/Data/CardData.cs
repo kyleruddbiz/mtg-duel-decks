@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
-    [CreateAssetMenu(fileName = "Card", menuName = "Data/Card")]
+    [CreateAssetMenu(fileName = "Card", menuName = "VoidScribe/Data/Card")]
     public class CardData : ScriptableObject
     {
         // Cost
@@ -12,6 +12,6 @@ namespace VoidScribe.MtgDuelDecks
         // Keyword Abilities - such as flying, trample, etc.
         // Activated abilities and static abilities
         [field: SerializeField] public Sprite[] CardImages { get; private set; }
-        [field: SerializeField] public When TestWhen { get; private set; }
+        [field: SerializeField] public Command[] Commands { get; private set; }
     }
 }

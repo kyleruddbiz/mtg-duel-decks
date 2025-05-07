@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
-    [CreateAssetMenu(fileName = "ZoneRuntimeSet", menuName = "RuntimeSets/ZoneRuntimeSet")]
+    [CreateAssetMenu(fileName = "ZoneRuntimeSet", menuName = "VoidScribe/RuntimeSets/ZoneRuntimeSet")]
     public class ZoneRuntimeSet : ScriptableObject
     {
         public event Action<Card> CardAdded;

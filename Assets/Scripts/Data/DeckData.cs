@@ -10,7 +10,7 @@ namespace VoidScribe.MtgDuelDecks
         [field: SerializeField] public int Count { get; private set; }
     }
 
-    [CreateAssetMenu(fileName = "Deck", menuName = "Data/Deck")]
+    [CreateAssetMenu(fileName = "Deck", menuName = "VoidScribe/Data/Deck")]
     public class DeckData : ScriptableObject
     {
         [field: SerializeField] public string DeckName { get; private set; }
