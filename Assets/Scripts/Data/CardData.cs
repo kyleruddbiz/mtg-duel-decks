@@ -12,11 +12,9 @@ namespace VoidScribe.MtgDuelDecks
         // Fields
         [field: SerializeField] public string CardName { get; private set; }
 
-        // TODO - These only apply to creatures and other special cases
-        //[field: SerializeField] public int Power { get; private set; }
-        //[field: SerializeField] public int Toughness { get; private set; }
-
-        [field: SerializeField] public CardType CardType { get; private set; }
+        // NODO - Choosing to ignore combo types for now (Artifact Creature).
+        // They don't show up in these duel decks.
+        [field: SerializeField] public virtual CardType CardType { get; private set; }
         [field: SerializeField] public CardSuperType[] CardSuperTypes { get; private set; }
         [field: SerializeField] public CardSubType[] CardSubTypes { get; private set; }
         [field: SerializeField] public ManaCost[] ManaCosts { get; private set; }
