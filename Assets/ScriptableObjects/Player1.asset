@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3965f23786efec94ba4abc6de9fe891b, type: 3}
   m_Name: Player1
   m_EditorClassIdentifier: 
-  <PlayerName>k__BackingField: 
-  <Deck>k__BackingField: {fileID: 0}
+  <PlayerName>k__BackingField: Player 1
+  <DeckData>k__BackingField: {fileID: 0}
   <Opponent>k__BackingField: {fileID: 0}
   <Health>k__BackingField: 20

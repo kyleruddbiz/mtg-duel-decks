@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 8212766563191543443, guid: 6a90ac5e2871d7a4c9bd8f8bd93e2a59, type: 3}
-  deckData: {fileID: 11400000, guid: 786d3a2dd985be5458506c3ab52e3951, type: 2}
+  player1: {fileID: 11400000, guid: 2246a82834616ee49b17794af79cfe00, type: 2}
   deckZoneRuntimeSet: {fileID: 11400000, guid: bcb35c83eb54a5944ae4f8f594278cdc, type: 2}
   graveyardZoneRuntimeSet: {fileID: 11400000, guid: a3773428ebead4449a7dd1959a911f05, type: 2}
   exileZoneRuntimeSet: {fileID: 11400000, guid: de989f0683b637c42a86b2bb5a619c6a, type: 2}

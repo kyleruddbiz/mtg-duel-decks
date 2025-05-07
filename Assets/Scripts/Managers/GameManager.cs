@@ -17,7 +17,8 @@ namespace VoidScribe.MtgDuelDecks
         public static GameManager Instance { get; private set; }
 
         [SerializeField] private Card cardPrefab;
-        [SerializeField] private DeckData deckData;
+
+        [SerializeField] private Player player1;
 
         [Header("Runtime Sets")]
         [SerializeField] private ZoneRuntimeSet deckZoneRuntimeSet;
@@ -44,7 +45,7 @@ namespace VoidScribe.MtgDuelDecks
 
         private void Start()
         {
-            InitializeDeck();
+            InitializeDeck(player1);
         }
 
         private void Update()
@@ -92,16 +93,16 @@ namespace VoidScribe.MtgDuelDecks
             }
         }
 
-        private void InitializeDeck()
+        private void InitializeDeck(Player controllingPlayer)
         {
             var cards = new List<Card>();
 
-            foreach (CardSet cardSet in deckData.CardSets)
+            foreach (CardSet cardSet in controllingPlayer.DeckData.CardSets)
             {
                 for (int i = 0; i < cardSet.Count; i++)
                 {
                     Card card = Instantiate(cardPrefab);
-                    card.Initialize(cardSet.CardData, imageIndex: i);
+                    card.Initialize(controllingPlayer, cardSet.CardData, imageIndex: i);
 
                     if (cards.Count == 0)
                     {

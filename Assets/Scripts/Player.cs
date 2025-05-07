@@ -6,7 +6,7 @@ namespace VoidScribe.MtgDuelDecks
     public class Player : ScriptableObject
     {
         [field: SerializeField] public string PlayerName { get; private set; }
-        [field: SerializeField] public DeckData Deck { get; private set; }
+        [field: SerializeField] public DeckData DeckData { get; private set; }
         [field: SerializeField] public Player Opponent { get; private set; }
         [field: SerializeField] public int Health { get; private set; } = 20;
     }

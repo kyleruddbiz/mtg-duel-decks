@@ -8,8 +8,10 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeField] private SpriteRenderer visual;
 
         [Header(HeaderConstants.Fields)]
-        [SerializeField] private int imageIndex;
         [SerializeField] private CardData cardData;
+        [SerializeField] private int imageIndex;
+
+        [field: SerializeField] public Player ControllingPlayer { get; private set; }
 
         public ZoneRuntimeSet CurrentZone { get; set; }
 
@@ -52,17 +54,19 @@ namespace VoidScribe.MtgDuelDecks
             }
         }
 
-        public void MoveToZone(ZoneRuntimeSet destinationZone)
+        public void Initialize(Player controllingPlayer, CardData cardData, int imageIndex)
         {
-            ZoneRuntimeSet.MoveCard(this, destinationZone);
-        }
+            ControllingPlayer = controllingPlayer;
 
-        public void Initialize(CardData cardData, int imageIndex)
-        {
             this.cardData = cardData;
             this.imageIndex = imageIndex;
 
             UpdateVisual();
+        }
+
+        public void MoveToZone(ZoneRuntimeSet destinationZone)
+        {
+            ZoneRuntimeSet.MoveCard(this, destinationZone);
         }
 
         private void UpdateVisual()
