@@ -16,7 +16,12 @@ MonoBehaviour:
   - {fileID: -2676779466967555406, guid: 585de5b5660ebcd4f838ccd504fbc859, type: 3}
   - {fileID: -7975453983658932202, guid: 4ca57b24eddc765499f58c569fe1970c, type: 3}
   - {fileID: -615331606065602101, guid: e27207b202a5aa547a48bde56ff6a64f, type: 3}
-  <TestWhen>k__BackingField: {fileID: 11400000, guid: 6d75ea433db3d354aad7ca1812625323, type: 2}
   <Commands>k__BackingField:
-  - action: {fileID: 0}
-    parameters: []
+  - action: {fileID: 11400000, guid: 64b582c8cfefd044fa6d7c28edadd94e, type: 2}
+    when: {fileID: 11400000, guid: 6d75ea433db3d354aad7ca1812625323, type: 2}
+    parameters:
+    - type: 1
+      stringValue: 
+      intValue: 1
+      floatValue: 0
+      boolValue: 0
