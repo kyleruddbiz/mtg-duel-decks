@@ -8,7 +8,7 @@ namespace VoidScribe.MtgDuelDecks
         protected override void Execute(Card sourceCard, int numberOfCards)
         {
             // TODO - Draw a card from the deck
-            Debug.Log($"Drawing {numberOfCards} cards from the deck.");
+            Debug.Log($"{sourceCard.ControllingPlayer}: Drawing {numberOfCards} cards from the deck.");
         }
     }
 }
