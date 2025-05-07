@@ -6,6 +6,7 @@ namespace VoidScribe.MtgDuelDecks
     public class TestManaManager : ManaManager
     {
         [SerializeField] private bool sendIt;
+        [SerializeField] private bool reset;
         [SerializeField] private int setWhiteMana;
         [SerializeField] private int setBlueMana;
         [SerializeField] private int setBlackMana;
@@ -15,6 +16,13 @@ namespace VoidScribe.MtgDuelDecks
         // Ultra-hack, baby!!
         private void OnValidate()
         {
+            if (reset)
+            {
+                reset = false;
+                availableMana.Clear();
+                return;
+            }
+
             if (sendIt)
             {
                 sendIt = false;
