@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1fe9e819b8db74ea964982d8c33ef6, type: 3}
   m_Name: Geistwave
   m_EditorClassIdentifier: 
-  <IsWIP>k__BackingField: 1
+  <IsWip>k__BackingField: 1
   <CardName>k__BackingField: Geistwave
-  <CardType>k__BackingField: {fileID: 0}
+  <CardType>k__BackingField: {fileID: 11400000, guid: bf3c36e23285c2e45b15f200bb54a50a, type: 2}
   <CardImages>k__BackingField:
   - {fileID: 9154770072198218050, guid: 0b9638d50d17a0c4ea41a70de401f87d, type: 3}
   - {fileID: -5501651034679056776, guid: edb96352ac99c0d428f2e9e749f81a68, type: 3}

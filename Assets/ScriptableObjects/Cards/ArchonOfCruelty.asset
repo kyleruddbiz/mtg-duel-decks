@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1fe9e819b8db74ea964982d8c33ef6, type: 3}
   m_Name: ArchonOfCruelty
   m_EditorClassIdentifier: 
-  <IsWIP>k__BackingField: 1
-  <CardName>k__BackingField: Archon of Cruelty
-  <CardType>k__BackingField: {fileID: 0}
+  <IsWip>k__BackingField: 1
   <CardImages>k__BackingField:
   - {fileID: 8239433782798592647, guid: a1e8fea96fda5244f98bad0ac0edc068, type: 3}
   - {fileID: 3091713732821390428, guid: 3c35084811991614cb745347cfac3373, type: 3}
+  <CardName>k__BackingField: Archon of Cruelty
+  <CardType>k__BackingField: {fileID: 11400000, guid: bc537cce4133c274ba4c549b98510373, type: 2}
+  <CardSuperTypes>k__BackingField: []
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: 7b9c6464b004ee1458d91580dc1b3b93, type: 2}
   <ManaCosts>k__BackingField:
   - <Color>k__BackingField: 2
     <Amount>k__BackingField: 2
