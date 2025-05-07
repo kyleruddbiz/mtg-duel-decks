@@ -1,14 +1,12 @@
+using System;
+using UnityEngine;
+
 namespace VoidScribe.MtgDuelDecks
 {
-    public readonly struct ManaCost
+    [Serializable]
+    public class ManaCost
     {
-        public ManaCost(Color color, int amount)
-        {
-            Color = color;
-            Amount = amount;
-        }
-
-        public Color Color { get; }
-        public int Amount { get; }
+        [field: SerializeField] public Color Color { get; private set; }
+        [field: SerializeField] public int Amount { get; private set; }
     }
 }

@@ -59,7 +59,7 @@ namespace VoidScribe.MtgDuelDecks
 
                 case State.ReadyToGame:
                     Debug.Log("Doing a thing");
-                    StartCoroutine(DoGameThings());
+                    //StartCoroutine(DoGameThings());
 
                     state = State.Gaming;
                     break;
@@ -71,19 +71,19 @@ namespace VoidScribe.MtgDuelDecks
             }
         }
 
-        private IEnumerator DoGameThings()
-        {
-            while (true)
-            {
-                yield return new WaitForSeconds(1f);
+        //private IEnumerator DoGameThings()
+        //{
+        //    while (true)
+        //    {
+        //        yield return new WaitForSeconds(1f);
 
-                Debug.Log($"Red Mana: {manaManager.GetAvailableMana(Color.Red)}");
+        //        Debug.Log($"Red Mana: {manaManager.GetAvailableMana(Color.Red)}");
 
-                manaManager.AddMana(Color.Red, 5);
+        //        manaManager.AddMana(Color.Red, 5);
 
-                Debug.Log($"Red Mana: {manaManager.GetAvailableMana(Color.Red)}");
-            }
-        }
+        //        Debug.Log($"Red Mana: {manaManager.GetAvailableMana(Color.Red)}");
+        //    }
+        //}
 
         private IEnumerator MoveTheCards()
         {

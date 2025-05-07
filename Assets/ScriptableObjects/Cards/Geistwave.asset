@@ -12,8 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1fe9e819b8db74ea964982d8c33ef6, type: 3}
   m_Name: Geistwave
   m_EditorClassIdentifier: 
+  <IsWIP>k__BackingField: 1
+  <CardName>k__BackingField: Geistwave
+  <CardType>k__BackingField: {fileID: 0}
   <CardImages>k__BackingField:
   - {fileID: 9154770072198218050, guid: 0b9638d50d17a0c4ea41a70de401f87d, type: 3}
   - {fileID: -5501651034679056776, guid: edb96352ac99c0d428f2e9e749f81a68, type: 3}
   - {fileID: -8844080215777473482, guid: 074c82c9eeb07b34a9b53971a35a0f3b, type: 3}
-  <TestWhen>k__BackingField: {fileID: 0}
+  <ManaCosts>k__BackingField:
+  - <Color>k__BackingField: 1
+    <Amount>k__BackingField: 1
+  - <Color>k__BackingField: 5
+    <Amount>k__BackingField: 1
+  <Commands>k__BackingField: []

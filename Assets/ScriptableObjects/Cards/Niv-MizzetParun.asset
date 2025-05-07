@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1fe9e819b8db74ea964982d8c33ef6, type: 3}
   m_Name: Niv-MizzetParun
   m_EditorClassIdentifier: 
+  <IsWIP>k__BackingField: 1
+  <CardName>k__BackingField: Niv-Mizzet, Parun
+  <CardType>k__BackingField: {fileID: 0}
   <CardImages>k__BackingField:
   - {fileID: -218969803226657820, guid: f24ef38a88178ed428341ffe176d29b5, type: 3}
   - {fileID: 5501498291759326193, guid: cab3baa6243e2274ea14653fcc8cc6a9, type: 3}
   - {fileID: 4652294795180552462, guid: 14c9579ed43c0224cb861ed2cdf56c2c, type: 3}
+  <ManaCosts>k__BackingField:
+  - <Color>k__BackingField: 1
+    <Amount>k__BackingField: 3
+  - <Color>k__BackingField: 3
+    <Amount>k__BackingField: 3
+  <Commands>k__BackingField: []

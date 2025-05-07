@@ -7,5 +7,6 @@ namespace VoidScribe.MtgDuelDecks
         Black,
         Red,
         Green,
+        Colorless,
     }
 }

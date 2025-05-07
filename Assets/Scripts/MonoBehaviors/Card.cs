@@ -81,7 +81,7 @@ namespace VoidScribe.MtgDuelDecks
 
         public override string ToString()
         {
-            return $"{cardData.name} ({imageIndex})";
+            return $"{(cardData.IsWip ? "[WIP]" : "")}{cardData.name} ({imageIndex})";
         }
     }
 }
