@@ -25,6 +25,7 @@ namespace VoidScribe.MtgDuelDecks
             }
         }
 
+        // TODO - Need to make this smarter to handle colorless mana
         public bool TrySpendMana(params ManaCost[] manaCosts)
         {
             foreach (ManaCost manaCost in manaCosts)

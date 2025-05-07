@@ -16,6 +16,8 @@ namespace VoidScribe.MtgDuelDecks
 
         public ZoneRuntimeSet CurrentZone { get; set; }
 
+        public ManaCost[] ManaCosts => cardData.ManaCosts;
+
         private void Awake()
         {
             UpdateVisual();
@@ -49,10 +51,9 @@ namespace VoidScribe.MtgDuelDecks
 
         private void OnMouseUp()
         {
-            foreach (Command command in cardData.Commands)
-            {
-                command.Execute(this);
-            }
+            // Cast spell (f it's in the hand)
+
+            GameManager.Instance.CastSpell(this);
         }
 
         public void Initialize(Player controllingPlayer, CardData cardData, int imageIndex)

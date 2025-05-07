@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
+    /// <summary>
+    /// TODO - This thing is gonna be a hacky mess for a bit while I figure out the architecture needs.
+    /// </summary>
     public class GameManager : MonoBehaviour
     {
         private enum State
@@ -137,6 +140,24 @@ namespace VoidScribe.MtgDuelDecks
             foreach (Card card in cards)
             {
                 deckZoneRuntimeSet.AddCard(card);
+            }
+        }
+
+        // TODO - Just for testing.
+        // This approach would be insta-spaghetti.
+        public void CastSpell(Card card)
+        {
+            if (card.CurrentZone == handZoneRuntimeSet)
+            {
+                if (manaManager.TrySpendMana(card.ManaCosts))
+                {
+                    card.MoveToZone(battlefieldZoneRuntimeSet);
+                    // trigger the enter the battlefield event.
+                }
+                else
+                {
+                    Debug.Log($"Not enough mana to cast {card}.");
+                }
             }
         }
     }

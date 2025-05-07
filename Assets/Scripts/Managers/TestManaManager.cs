@@ -5,13 +5,14 @@ namespace VoidScribe.MtgDuelDecks
     [CreateAssetMenu(fileName = "TestManaManager", menuName = "VoidScribe/Managers/TestManaManager")]
     public class TestManaManager : ManaManager
     {
-        [SerializeField] private bool sendIt;
         [SerializeField] private bool reset;
         [SerializeField] private int setWhiteMana;
         [SerializeField] private int setBlueMana;
         [SerializeField] private int setBlackMana;
         [SerializeField] private int setRedMana;
         [SerializeField] private int setGreenMana;
+        [SerializeField] private int setColorlessMana;
+        [SerializeField] private bool sendIt;
 
         // Ultra-hack, baby!!
         private void OnValidate()
@@ -51,6 +52,11 @@ namespace VoidScribe.MtgDuelDecks
                 {
                     availableMana[Color.Green] = setGreenMana;
                     setGreenMana = -1;
+                }
+                if (setColorlessMana != -1)
+                {
+                    availableMana[Color.Colorless] = setColorlessMana;
+                    setColorlessMana = -1;
                 }
             }
         }
