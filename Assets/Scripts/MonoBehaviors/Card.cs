@@ -6,6 +6,7 @@ namespace VoidScribe.MtgDuelDecks
     {
         [Header(HeaderConstants.Internal)]
         [SerializeField] private SpriteRenderer visual;
+        [SerializeField] private GameObject border;
 
         [Header(HeaderConstants.Fields)]
         [SerializeField] private CardData cardData;
@@ -76,6 +77,7 @@ namespace VoidScribe.MtgDuelDecks
                 return;
             }
 
+            border.SetActive(cardData.IsWip);
             visual.sprite = cardData.CardImages[imageIndex];
         }
 
