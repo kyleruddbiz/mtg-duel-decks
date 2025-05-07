@@ -19,6 +19,7 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeField] private Card cardPrefab;
 
         [SerializeField] private Player player1;
+        [SerializeField] private ManaManager manaManager;
 
         [Header("Runtime Sets")]
         [SerializeField] private ZoneRuntimeSet deckZoneRuntimeSet;
@@ -31,15 +32,15 @@ namespace VoidScribe.MtgDuelDecks
 
         private void Awake()
         {
-            if (Instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            else
+            if (Instance == null)
             {
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
             }
         }
 

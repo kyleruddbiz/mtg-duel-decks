@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Player1
   m_EditorClassIdentifier: 
   <PlayerName>k__BackingField: Player 1
-  <DeckData>k__BackingField: {fileID: 0}
+  <DeckData>k__BackingField: {fileID: 11400000, guid: 786d3a2dd985be5458506c3ab52e3951, type: 2}
   <Opponent>k__BackingField: {fileID: 0}
   <Health>k__BackingField: 20
