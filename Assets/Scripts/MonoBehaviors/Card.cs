@@ -4,7 +4,7 @@ namespace VoidScribe.MtgDuelDecks
 {
     public class Card : MonoBehaviour
     {
-        [Header(HeaderConstants.PrefabInternal)]
+        [Header(HeaderConstants.Internal)]
         [SerializeField] private SpriteRenderer visual;
 
         [Header(HeaderConstants.Fields)]

@@ -19,7 +19,7 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeField] private Card cardPrefab;
 
         [SerializeField] private Player player1;
-        [SerializeField] private ManaManager manaManager;
+        [SerializeReference] private ManaManager manaManager;
 
         [Header("Runtime Sets")]
         [SerializeField] private ZoneRuntimeSet deckZoneRuntimeSet;
@@ -59,12 +59,29 @@ namespace VoidScribe.MtgDuelDecks
 
                 case State.ReadyToGame:
                     Debug.Log("Doing a thing");
+                    StartCoroutine(DoGameThings());
+
                     state = State.Gaming;
                     break;
 
                 case State.Dealing:
                 case State.Gaming:
+
                     break;
+            }
+        }
+
+        private IEnumerator DoGameThings()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(1f);
+
+                Debug.Log($"Red Mana: {manaManager.GetAvailableMana(Color.Red)}");
+
+                manaManager.AddMana(Color.Red, 5);
+
+                Debug.Log($"Red Mana: {manaManager.GetAvailableMana(Color.Red)}");
             }
         }
 

@@ -6,7 +6,7 @@ namespace VoidScribe.MtgDuelDecks
     [CreateAssetMenu(fileName = "ManaManager", menuName = "VoidScribe/Managers/ManaManager")]
     public class ManaManager : ScriptableObject
     {
-        private readonly Dictionary<Color, int> availableMana = new();
+        protected readonly Dictionary<Color, int> availableMana = new();
 
         public int GetAvailableMana(Color color)
         {

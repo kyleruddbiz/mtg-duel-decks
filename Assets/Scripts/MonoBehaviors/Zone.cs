@@ -5,7 +5,7 @@ namespace VoidScribe.MtgDuelDecks
 {
     public class Zone : MonoBehaviour
     {
-        [Header(HeaderConstants.PrefabInternal)]
+        [Header(HeaderConstants.Internal)]
         [SerializeField] private Transform cardsDisplay;
         [SerializeField] private TextMeshPro zoneNameText;
 
