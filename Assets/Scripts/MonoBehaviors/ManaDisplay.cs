@@ -24,9 +24,6 @@ namespace VoidScribe.MtgDuelDecks
         private void Update()
         {
             amountText.text = manaManager.GetAvailableMana(color).ToString();
-
-            Debug.Log(amountText.text);
-            Debug.Log("managerseL: " + manaManager.GetAvailableMana(color).ToString());
         }
     }
 }

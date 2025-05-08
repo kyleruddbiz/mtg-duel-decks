@@ -160,5 +160,10 @@ namespace VoidScribe.MtgDuelDecks
                 }
             }
         }
+
+        public void ReturnToHand(Card card)
+        {
+            card.MoveToZone(handZoneRuntimeSet);
+        }
     }
 }
