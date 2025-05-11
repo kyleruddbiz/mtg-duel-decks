@@ -10,6 +10,8 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeField] private When when;
         [SerializeField] private CommandParameter[] parameters;
 
+        [field: SerializeField] public bool IsWip { get; private set; } = true;
+
         public void Execute(Card sourceCard)
         {
             Debug.Log("Executing command: " + action.name);

@@ -83,13 +83,31 @@ namespace VoidScribe.MtgDuelDecks
                 return;
             }
 
-            border.SetActive(cardData.IsWip);
+            border.SetActive(IsWip());
             visual.sprite = cardData.CardImages[imageIndex];
         }
 
         public override string ToString()
         {
-            return $"{(cardData.IsWip ? "[WIP]" : "")}{cardData.name} ({imageIndex})";
+            return $"{(IsWip() ? "[WIP]" : "")}{cardData.name} ({imageIndex})";
+        }
+
+        private bool IsWip()
+        {
+            if (cardData.IsWip)
+            {
+                return true;
+            }
+
+            foreach (Command command in Commands)
+            {
+                if (command.IsWip)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

@@ -37,5 +37,6 @@ MonoBehaviour:
       intValue: 1
       floatValue: 0
       boolValue: 0
+    <IsWip>k__BackingField: 1
   <Power>k__BackingField: 2
   <Toughness>k__BackingField: 2
