@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1fe9e819b8db74ea964982d8c33ef6, type: 3}
+  m_Name: DoomBlade
+  m_EditorClassIdentifier: 
+  <IsWip>k__BackingField: 1
+  <CardImages>k__BackingField:
+  - {fileID: 4823194619148568744, guid: 533e85917ac31974f959144e998417e7, type: 3}
+  - {fileID: 7394109268693881409, guid: db4154f30cdda774092ed6580744db42, type: 3}
+  - {fileID: 4430257273439808052, guid: 2508f3d2c3e99c644ab36e0b9344dc5b, type: 3}
+  - {fileID: -8224220048330781870, guid: 5b6fbc13be7240b469cf38ddad6d2dad, type: 3}
+  <CardName>k__BackingField: Doom Blade
+  <CardType>k__BackingField: {fileID: 11400000, guid: bf3c36e23285c2e45b15f200bb54a50a, type: 2}
+  <CardSuperTypes>k__BackingField: []
+  <CardSubTypes>k__BackingField: []
+  <ManaCosts>k__BackingField:
+  - <Color>k__BackingField: 2
+    <Amount>k__BackingField: 1
+  - <Color>k__BackingField: 5
+    <Amount>k__BackingField: 1
+  <CardTraits>k__BackingField: 0
+  <Commands>k__BackingField:
+  - <IsWip>k__BackingField: 1
+    action: {fileID: 11400000, guid: 8bb8688dc62a4064a9bba847dfef71b7, type: 2}
+    when: {fileID: 0}
+    queries:
+    - isPermanent: 0
+      cardType: {fileID: 11400000, guid: bc537cce4133c274ba4c549b98510373, type: 2}
+      <IsNegated>k__BackingField: 0
+      superTypes: []
+      subTypes: []
+      colors:
+      - <Value>k__BackingField: 2
+        <IsNegated>k__BackingField: 1
+    parameters: []

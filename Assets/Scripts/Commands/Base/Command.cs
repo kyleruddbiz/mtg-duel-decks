@@ -6,11 +6,12 @@ namespace VoidScribe.MtgDuelDecks
     [Serializable]
     public class Command
     {
+        [field: SerializeField] public bool IsWip { get; private set; } = true;
+
         [SerializeField] private CommandAction action;
         [SerializeField] private When when;
+        [SerializeField] private CardQuery[] queries;
         [SerializeField] private CommandParameter[] parameters;
-
-        [field: SerializeField] public bool IsWip { get; private set; } = true;
 
         public void Execute(Card sourceCard)
         {

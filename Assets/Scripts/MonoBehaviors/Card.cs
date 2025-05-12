@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
@@ -23,6 +25,19 @@ namespace VoidScribe.MtgDuelDecks
         public ManaCost[] ManaCosts => cardData.ManaCosts;
         public CardTraits CardTraits { get; private set; }
         public Command[] Commands => cardData.Commands;
+
+        public IEnumerable<Color> Colors
+        {
+            get
+            {
+                if (CardTraits.HasFlag(CardTraits.Devoid))
+                {
+                    return new[] { Color.Colorless };
+                }
+
+                return ManaCosts.Select(manaCost => manaCost.Color);
+            }
+        }
 
         private void Awake()
         {
