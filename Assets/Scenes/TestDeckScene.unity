@@ -768,7 +768,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 305224692841724488, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
       propertyPath: zoneName
-      value: Deck
+      value: Library
       objectReference: {fileID: 0}
     - target: {fileID: 305224692841724488, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
       propertyPath: zoneManager
@@ -792,7 +792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4475636102598117795, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
       propertyPath: m_Name
-      value: DeckZone
+      value: LibraryZone
       objectReference: {fileID: 0}
     - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
       propertyPath: m_LocalPosition.x
