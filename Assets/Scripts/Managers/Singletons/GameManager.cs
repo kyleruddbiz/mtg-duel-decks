@@ -159,6 +159,7 @@ namespace VoidScribe.MtgDuelDecks
                     card.MoveToZone(battlefieldZone);
                     // TODO - Trigger the enter the battlefield event.
                     // TODO - Trigger actions
+                    // TODO - Register listeners
                     return true;
                 }
                 else
@@ -166,6 +167,8 @@ namespace VoidScribe.MtgDuelDecks
                     Debug.Log($"Not enough mana to cast {card}.");
                 }
             }
+
+            Debug.Log($"Card is not in hand - {card.CardName}");
 
             return false;
         }
