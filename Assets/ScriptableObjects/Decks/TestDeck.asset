@@ -17,6 +17,8 @@ MonoBehaviour:
   - {fileID: 7796798138125073859, guid: 682a5c5aa644d6a4c86ad8e25c8b0c30, type: 3}
   <CardSets>k__BackingField:
   - <CardData>k__BackingField: {fileID: 11400000, guid: e5309deade466c5429baa4b022bf6372, type: 2}
-    <Count>k__BackingField: 3
+    <Count>k__BackingField: 2
   - <CardData>k__BackingField: {fileID: 11400000, guid: d67712f087738ef469991dcd9596570a, type: 2}
-    <Count>k__BackingField: 3
+    <Count>k__BackingField: 2
+  - <CardData>k__BackingField: {fileID: 11400000, guid: 5e641d7af8811f04489cbaeb95768301, type: 2}
+    <Count>k__BackingField: 2

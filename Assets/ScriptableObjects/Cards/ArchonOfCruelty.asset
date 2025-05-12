@@ -26,6 +26,7 @@ MonoBehaviour:
     <Amount>k__BackingField: 2
   - <Color>k__BackingField: 5
     <Amount>k__BackingField: 6
+  <CardTraits>k__BackingField: 1
   <Commands>k__BackingField: []
   <Power>k__BackingField: 6
   <Toughness>k__BackingField: 6
