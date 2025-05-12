@@ -13,15 +13,29 @@ MonoBehaviour:
   m_Name: Geistwave
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
-  <CardName>k__BackingField: Geistwave
-  <CardType>k__BackingField: {fileID: 11400000, guid: bf3c36e23285c2e45b15f200bb54a50a, type: 2}
   <CardImages>k__BackingField:
   - {fileID: 9154770072198218050, guid: 0b9638d50d17a0c4ea41a70de401f87d, type: 3}
   - {fileID: -5501651034679056776, guid: edb96352ac99c0d428f2e9e749f81a68, type: 3}
   - {fileID: -8844080215777473482, guid: 074c82c9eeb07b34a9b53971a35a0f3b, type: 3}
+  <CardName>k__BackingField: Geistwave
+  <CardType>k__BackingField: {fileID: 11400000, guid: bf3c36e23285c2e45b15f200bb54a50a, type: 2}
+  <CardSuperTypes>k__BackingField: []
+  <CardSubTypes>k__BackingField: []
   <ManaCosts>k__BackingField:
   - <Color>k__BackingField: 1
     <Amount>k__BackingField: 1
   - <Color>k__BackingField: 5
     <Amount>k__BackingField: 1
-  <Commands>k__BackingField: []
+  <CardTraits>k__BackingField: 0
+  <Commands>k__BackingField:
+  - <IsWip>k__BackingField: 1
+    action: {fileID: 11400000, guid: 5524278697b732e43b118c68eeaf802c, type: 2}
+    when: []
+    parameters: []
+    queries:
+    - isPermanent: 1
+      cardType: {fileID: 11400000, guid: 736c30a0ba5244643a06216a90f73613, type: 2}
+      <IsNegated>k__BackingField: 1
+      superTypes: []
+      subTypes: []
+      colors: []

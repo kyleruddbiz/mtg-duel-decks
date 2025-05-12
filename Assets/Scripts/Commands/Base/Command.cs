@@ -9,9 +9,9 @@ namespace VoidScribe.MtgDuelDecks
         [field: SerializeField] public bool IsWip { get; private set; } = true;
 
         [SerializeField] private CommandAction action;
-        [SerializeField] private When when;
-        [SerializeField] private CardQuery[] queries;
+        [SerializeField] private When[] when;
         [SerializeField] private CommandParameter[] parameters;
+        [SerializeField] private CardQuery[] queries;
 
         public void Execute(Card sourceCard)
         {
