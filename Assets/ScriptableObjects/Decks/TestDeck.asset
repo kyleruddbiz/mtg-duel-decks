@@ -16,9 +16,9 @@ MonoBehaviour:
   <SleeveImages>k__BackingField:
   - {fileID: 7796798138125073859, guid: 682a5c5aa644d6a4c86ad8e25c8b0c30, type: 3}
   <CardSets>k__BackingField:
-  - <CardData>k__BackingField: {fileID: 11400000, guid: e5309deade466c5429baa4b022bf6372, type: 2}
-    <Count>k__BackingField: 2
-  - <CardData>k__BackingField: {fileID: 11400000, guid: d67712f087738ef469991dcd9596570a, type: 2}
-    <Count>k__BackingField: 2
   - <CardData>k__BackingField: {fileID: 11400000, guid: a40b05343bf1d7347b0462c196b683e5, type: 2}
-    <Count>k__BackingField: 2
+    <Count>k__BackingField: 1
+  - <CardData>k__BackingField: {fileID: 11400000, guid: 66d5abf965d1fb14d9595725a900cad0, type: 2}
+    <Count>k__BackingField: 1
+  - <CardData>k__BackingField: {fileID: 11400000, guid: 9c9c060fba7d4a4498cd587fe8720d01, type: 2}
+    <Count>k__BackingField: 1

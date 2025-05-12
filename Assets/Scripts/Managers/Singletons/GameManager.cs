@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
@@ -57,11 +58,10 @@ namespace VoidScribe.MtgDuelDecks
             switch (state)
             {
                 case State.ReadyToDeal:
-                    StartCoroutine(MoveTheCards());
+                    StartCoroutine(Setup());
                     break;
 
                 case State.ReadyToGame:
-                    Debug.Log("Doing a thing");
                     //StartCoroutine(DoGameThings());
 
                     state = State.Gaming;
@@ -74,44 +74,26 @@ namespace VoidScribe.MtgDuelDecks
             }
         }
 
-        //private IEnumerator DoGameThings()
-        //{
-        //    while (true)
-        //    {
-        //        yield return new WaitForSeconds(1f);
-
-        //        Debug.Log($"Red Mana: {manaManager.GetAvailableMana(Color.Red)}");
-
-        //        manaManager.AddMana(Color.Red, 5);
-
-        //        Debug.Log($"Red Mana: {manaManager.GetAvailableMana(Color.Red)}");
-        //    }
-        //}
-
-        private IEnumerator MoveTheCards()
+        private IEnumerator Setup()
         {
             state = State.Dealing;
 
-            int maxCards = System.Math.Min(deckZoneRuntimeSet.Cards.Count, 5);
+            yield return new WaitForSeconds(.25f);
 
-            for (int i = 0; i < maxCards; i++)
-            {
-                yield return new WaitForSeconds(.5f);
-                Move();
-            }
+            deckZoneRuntimeSet.Cards.First(x => x.CardName == "Goblin Electromancer")
+                .MoveToZone(battlefieldZoneRuntimeSet);
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(.25f);
+
+            deckZoneRuntimeSet.Cards.First(x => x.CardName == "Dogged Detective")
+                .MoveToZone(battlefieldZoneRuntimeSet);
+
+            yield return new WaitForSeconds(.25f);
+
+            deckZoneRuntimeSet.Cards.First(x => x.CardName == "Doom Blade")
+                .MoveToZone(handZoneRuntimeSet);
 
             state = State.ReadyToGame;
-
-            void Move()
-            {
-                Card card = deckZoneRuntimeSet.Cards[0];
-
-                Debug.Log($"Moving {card} to hand zone");
-
-                card.MoveToZone(handZoneRuntimeSet);
-            }
         }
 
         private void InitializeDeck(Player controllingPlayer)
