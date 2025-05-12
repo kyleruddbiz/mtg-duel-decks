@@ -75,28 +75,11 @@ namespace VoidScribe.MtgDuelDecks
             //Debug.Log("Mouse down - " + ToString());
         }
 
-        private bool blarr = false;
-
         private void OnMouseUp()
         {
             // TODO - Just for testing right now.
 
-            if (!blarr)
-            {
-                blarr = true;
-                AddTraits(CardTraits.Deathtouch | CardTraits.Hexproof);
-
-                Debug.Log(CardTraits);
-            }
-            else
-            {
-                blarr = false;
-                RemoveTraits(CardTraits.Deathtouch | CardTraits.Hexproof);
-
-                Debug.Log(CardTraits);
-            }
-
-            // GameManager.Instance.CastSpell(this);
+            GameManager.Instance.SetAsTarget(this);
         }
 
         public void Initialize(Player controllingPlayer, CardData cardData, int imageIndex)

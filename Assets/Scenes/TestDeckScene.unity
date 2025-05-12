@@ -1000,7 +1000,7 @@ MonoBehaviour:
   graveyardZone: {fileID: 11400000, guid: a3773428ebead4449a7dd1959a911f05, type: 2}
   exileZone: {fileID: 11400000, guid: de989f0683b637c42a86b2bb5a619c6a, type: 2}
   battlefieldZone: {fileID: 11400000, guid: 255211f5c2647f84bb7049fd0236e89b, type: 2}
-  handZoneRuntimeSet: {fileID: 11400000, guid: f6fc44e383fa1b7469b27b7ae7114921, type: 2}
+  handZone: {fileID: 11400000, guid: f6fc44e383fa1b7469b27b7ae7114921, type: 2}
 --- !u!4 &1618818608
 Transform:
   m_ObjectHideFlags: 0

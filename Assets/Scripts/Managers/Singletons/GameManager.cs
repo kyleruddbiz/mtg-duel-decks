@@ -12,10 +12,9 @@ namespace VoidScribe.MtgDuelDecks
     {
         private enum State
         {
-            ReadyToDeal,
-            Dealing,
-            ReadyToGame,
-            Gaming
+            Setup,
+            ReadyToCast,
+            Casting,
         }
 
         public static GameManager Instance { get; private set; }
@@ -32,7 +31,7 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeField] private ZoneRuntimeSet battlefieldZone;
         [SerializeField] private ZoneRuntimeSet handZone;
 
-        private State state = State.ReadyToDeal;
+        private State state = State.Setup;
 
         private void Awake()
         {
@@ -51,32 +50,52 @@ namespace VoidScribe.MtgDuelDecks
         private void Start()
         {
             InitializeDeck(player1);
+
+            StartCoroutine(Setup());
         }
 
         private void Update()
         {
             switch (state)
             {
-                case State.ReadyToDeal:
-                    StartCoroutine(Setup());
+                case State.ReadyToCast:
+                    _ = HandleCastingAsync();
                     break;
 
-                case State.ReadyToGame:
-                    //StartCoroutine(DoGameThings());
-
-                    state = State.Gaming;
+                case State.Casting:
                     break;
 
-                case State.Dealing:
-                case State.Gaming:
-
+                case State.Setup:
                     break;
             }
         }
 
+        private async Awaitable HandleCastingAsync()
+        {
+            SetState(State.Casting);
+
+            bool didCastSpell = false;
+
+            do
+            {
+                Card targetCard = await ChooseTargetCardAsync();
+                didCastSpell = TryCastSpell(targetCard);
+            }
+            while (!didCastSpell);
+
+            SetState(State.ReadyToCast);
+        }
+
+        private void SetState(State state)
+        {
+            Debug.Log($"{this.state} -> {state}");
+
+            this.state = state;
+        }
+
         private IEnumerator Setup()
         {
-            state = State.Dealing;
+            SetState(State.Setup);
 
             yield return new WaitForSeconds(.25f);
 
@@ -93,7 +112,7 @@ namespace VoidScribe.MtgDuelDecks
             libraryZone.Cards.First(x => x.CardName == "Doom Blade")
                 .MoveToZone(handZone);
 
-            state = State.ReadyToGame;
+            SetState(State.ReadyToCast);
         }
 
         private void InitializeDeck(Player controllingPlayer)
@@ -127,20 +146,47 @@ namespace VoidScribe.MtgDuelDecks
 
         // TODO - Just for testing.
         // This approach would be insta-spaghetti.
-        public void CastSpell(Card card)
+        public bool TryCastSpell(Card card)
         {
+            // TODO - Put the spell on the stack.
+            // TODO - Check if card has decisions that need to be made (mode, targetting, etc.)
+
             if (card.CurrentZone == handZone)
             {
                 if (manaManager.TrySpendMana(card.ManaCosts))
                 {
+                    Debug.Log("Casting spell - " + card.CardName);
                     card.MoveToZone(battlefieldZone);
-                    // trigger the enter the battlefield event.
+                    // TODO - Trigger the enter the battlefield event.
+                    // TODO - Trigger actions
+                    return true;
                 }
                 else
                 {
                     Debug.Log($"Not enough mana to cast {card}.");
                 }
             }
+
+            return false;
+        }
+
+        private AwaitableCompletionSource<Card> targetCardCompletionSource;
+
+        public async Awaitable<Card> ChooseTargetCardAsync()
+        {
+            targetCardCompletionSource = new AwaitableCompletionSource<Card>();
+
+            // TODO - Use an input query to show valid choices for the target.
+            // TODO - Show the targetting UI.
+
+            return await targetCardCompletionSource.Awaitable;
+
+            // TODO - Validate card matches query? or do I do it in choose target instead?
+        }
+
+        public void SetAsTarget(Card card)
+        {
+            targetCardCompletionSource.SetResult(card);
         }
 
         public void ReturnToHand(Card card)
