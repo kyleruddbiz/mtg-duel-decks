@@ -9,24 +9,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fcc9ad0829a797408b8adcd53a75f29, type: 3}
-  m_Name: ArchonOfCruelty
+  m_Script: {fileID: 11500000, guid: ac1fe9e819b8db74ea964982d8c33ef6, type: 3}
+  m_Name: DoggedDetective
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
   <CardImages>k__BackingField:
-  - {fileID: 8239433782798592647, guid: a1e8fea96fda5244f98bad0ac0edc068, type: 3}
-  - {fileID: 3091713732821390428, guid: 3c35084811991614cb745347cfac3373, type: 3}
-  <CardName>k__BackingField: Archon of Cruelty
+  - {fileID: -936071043610324972, guid: c76bd311935200e43b69f89525e95d59, type: 3}
+  - {fileID: -6503924839076034406, guid: 2ba52516a512c5a448cb248c860e0f16, type: 3}
+  - {fileID: 2868678236565985782, guid: ae18b6c7e57ba9a45b1908b6d0d81d77, type: 3}
+  <CardName>k__BackingField: Dogged Detective
   <CardType>k__BackingField: {fileID: 11400000, guid: bc537cce4133c274ba4c549b98510373, type: 2}
   <CardSuperTypes>k__BackingField: []
   <CardSubTypes>k__BackingField:
-  - {fileID: 11400000, guid: 7b9c6464b004ee1458d91580dc1b3b93, type: 2}
+  - {fileID: 11400000, guid: cdc79f991907c70458e32b03609de4c2, type: 2}
+  - {fileID: 11400000, guid: 40a7a625c1aac61439cc0c3314dc947b, type: 2}
   <ManaCosts>k__BackingField:
   - <Color>k__BackingField: 5
-    <Amount>k__BackingField: 6
+    <Amount>k__BackingField: 1
   - <Color>k__BackingField: 2
-    <Amount>k__BackingField: 2
-  <CardTraits>k__BackingField: 1
+    <Amount>k__BackingField: 1
+  <CardTraits>k__BackingField: 0
   <Commands>k__BackingField: []
-  <Power>k__BackingField: 6
-  <Toughness>k__BackingField: 6

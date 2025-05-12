@@ -23,15 +23,17 @@ MonoBehaviour:
   <CardSuperTypes>k__BackingField: []
   <CardSubTypes>k__BackingField: []
   <ManaCosts>k__BackingField:
-  - <Color>k__BackingField: 2
-    <Amount>k__BackingField: 1
   - <Color>k__BackingField: 5
+    <Amount>k__BackingField: 1
+  - <Color>k__BackingField: 2
     <Amount>k__BackingField: 1
   <CardTraits>k__BackingField: 0
   <Commands>k__BackingField:
   - <IsWip>k__BackingField: 1
     action: {fileID: 11400000, guid: 8bb8688dc62a4064a9bba847dfef71b7, type: 2}
-    when: {fileID: 0}
+    when:
+    - {fileID: 0}
+    parameters: []
     queries:
     - isPermanent: 0
       cardType: {fileID: 11400000, guid: bc537cce4133c274ba4c549b98510373, type: 2}
@@ -41,4 +43,3 @@ MonoBehaviour:
       colors:
       - <Value>k__BackingField: 2
         <IsNegated>k__BackingField: 1
-    parameters: []

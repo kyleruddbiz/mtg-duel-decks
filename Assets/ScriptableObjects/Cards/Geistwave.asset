@@ -22,9 +22,9 @@ MonoBehaviour:
   <CardSuperTypes>k__BackingField: []
   <CardSubTypes>k__BackingField: []
   <ManaCosts>k__BackingField:
-  - <Color>k__BackingField: 1
-    <Amount>k__BackingField: 1
   - <Color>k__BackingField: 5
+    <Amount>k__BackingField: 1
+  - <Color>k__BackingField: 1
     <Amount>k__BackingField: 1
   <CardTraits>k__BackingField: 0
   <Commands>k__BackingField:

@@ -24,9 +24,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cdc79f991907c70458e32b03609de4c2, type: 2}
   - {fileID: 11400000, guid: 1f3e63b6a9535ff498718d8a1986b309, type: 2}
   <ManaCosts>k__BackingField:
-  - <Color>k__BackingField: 1
-    <Amount>k__BackingField: 2
   - <Color>k__BackingField: 5
+    <Amount>k__BackingField: 2
+  - <Color>k__BackingField: 1
     <Amount>k__BackingField: 2
   <CardTraits>k__BackingField: 0
   <Commands>k__BackingField:
