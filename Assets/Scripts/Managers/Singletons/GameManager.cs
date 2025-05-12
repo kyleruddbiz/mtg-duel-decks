@@ -26,11 +26,11 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeReference] private ManaManager manaManager;
 
         [Header("Runtime Sets")]
-        [SerializeField] private ZoneRuntimeSet deckZoneRuntimeSet;
-        [SerializeField] private ZoneRuntimeSet graveyardZoneRuntimeSet;
-        [SerializeField] private ZoneRuntimeSet exileZoneRuntimeSet;
-        [SerializeField] private ZoneRuntimeSet battlefieldZoneRuntimeSet;
-        [SerializeField] private ZoneRuntimeSet handZoneRuntimeSet;
+        [SerializeField] private ZoneRuntimeSet libraryZone;
+        [SerializeField] private ZoneRuntimeSet graveyardZone;
+        [SerializeField] private ZoneRuntimeSet exileZone;
+        [SerializeField] private ZoneRuntimeSet battlefieldZone;
+        [SerializeField] private ZoneRuntimeSet handZone;
 
         private State state = State.ReadyToDeal;
 
@@ -80,18 +80,18 @@ namespace VoidScribe.MtgDuelDecks
 
             yield return new WaitForSeconds(.25f);
 
-            deckZoneRuntimeSet.Cards.First(x => x.CardName == "Goblin Electromancer")
-                .MoveToZone(battlefieldZoneRuntimeSet);
+            libraryZone.Cards.First(x => x.CardName == "Goblin Electromancer")
+                .MoveToZone(battlefieldZone);
 
             yield return new WaitForSeconds(.25f);
 
-            deckZoneRuntimeSet.Cards.First(x => x.CardName == "Dogged Detective")
-                .MoveToZone(battlefieldZoneRuntimeSet);
+            libraryZone.Cards.First(x => x.CardName == "Dogged Detective")
+                .MoveToZone(battlefieldZone);
 
             yield return new WaitForSeconds(.25f);
 
-            deckZoneRuntimeSet.Cards.First(x => x.CardName == "Doom Blade")
-                .MoveToZone(handZoneRuntimeSet);
+            libraryZone.Cards.First(x => x.CardName == "Doom Blade")
+                .MoveToZone(handZone);
 
             state = State.ReadyToGame;
         }
@@ -121,7 +121,7 @@ namespace VoidScribe.MtgDuelDecks
 
             foreach (Card card in cards)
             {
-                deckZoneRuntimeSet.AddCard(card);
+                libraryZone.AddCard(card);
             }
         }
 
@@ -129,11 +129,11 @@ namespace VoidScribe.MtgDuelDecks
         // This approach would be insta-spaghetti.
         public void CastSpell(Card card)
         {
-            if (card.CurrentZone == handZoneRuntimeSet)
+            if (card.CurrentZone == handZone)
             {
                 if (manaManager.TrySpendMana(card.ManaCosts))
                 {
-                    card.MoveToZone(battlefieldZoneRuntimeSet);
+                    card.MoveToZone(battlefieldZone);
                     // trigger the enter the battlefield event.
                 }
                 else
@@ -145,7 +145,7 @@ namespace VoidScribe.MtgDuelDecks
 
         public void ReturnToHand(Card card)
         {
-            card.MoveToZone(handZoneRuntimeSet);
+            card.MoveToZone(handZone);
         }
     }
 }
