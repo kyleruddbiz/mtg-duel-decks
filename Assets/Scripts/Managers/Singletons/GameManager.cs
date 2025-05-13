@@ -31,6 +31,7 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeField] private ZoneRuntimeSet exileZone;
         [SerializeField] private ZoneRuntimeSet battlefieldZone;
         [SerializeField] private ZoneRuntimeSet handZone;
+        [SerializeField] private ZoneRuntimeSet stackZone;
 
         private State state = State.Setup;
 
@@ -155,7 +156,6 @@ namespace VoidScribe.MtgDuelDecks
         // This approach would be insta-spaghetti.
         public async Awaitable<bool> TryCastSpellAsync(Card card)
         {
-            // TODO - Put the spell on the stack.
             // TODO - Check if card has decisions that need to be made (mode, targetting, etc.)
 
             if (card.CurrentZone == handZone)
@@ -163,22 +163,31 @@ namespace VoidScribe.MtgDuelDecks
                 if (manaManager.TrySpendMana(card.ManaCosts))
                 {
                     Debug.Log("Casting spell - " + card.CardName);
-                    card.MoveToZone(battlefieldZone);
+                    card.MoveToZone(stackZone);
                     // TODO - Trigger the enter the battlefield event.
                     // TODO - Trigger actions
                     // TODO - Register listeners
 
                     await card.ExecuteCommandsAsync();
 
-                    return true;
+                    if (card.CardType.IsPermanent)
+                    {
+                        card.MoveToZone(battlefieldZone);
+                    }
+                    else
+                    {
+                        card.MoveToZone(graveyardZone);
+                    }
                 }
                 else
                 {
                     Debug.Log($"Not enough mana to cast {card}.");
                 }
             }
-
-            Debug.Log($"Card is not in hand - {card.CardName}");
+            else
+            {
+                Debug.Log($"Card is not in hand - {card.CardName}");
+            }
 
             return false;
         }

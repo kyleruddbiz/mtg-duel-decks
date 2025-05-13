@@ -343,6 +343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardsDisplay: {fileID: 5494939078325139049}
   zoneNameText: {fileID: 6707124190672844359}
+  background: {fileID: 379912076564748007}
   zoneName: Zone Name
   horizontalOffset: 0.1
-  cards: []
+  zoneRuntimeSet: {fileID: 0}
+  isBackgroundVisible: 1

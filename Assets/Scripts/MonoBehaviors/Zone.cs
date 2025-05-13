@@ -8,15 +8,20 @@ namespace VoidScribe.MtgDuelDecks
         [Header(HeaderConstants.Internal)]
         [SerializeField] private Transform cardsDisplay;
         [SerializeField] private TextMeshPro zoneNameText;
+        [SerializeField] private GameObject background;
 
         [Header(HeaderConstants.Fields)]
         [SerializeField] private string zoneName;
         [SerializeField] private float horizontalOffset;
         [SerializeField] private ZoneRuntimeSet zoneRuntimeSet;
+        [SerializeField] private bool isBackgroundVisible;
 
         public void Awake()
         {
             zoneNameText.text = zoneName;
+
+            background.SetActive(isBackgroundVisible);
+            zoneNameText.gameObject.SetActive(isBackgroundVisible);
 
             if (zoneRuntimeSet != null)
             {

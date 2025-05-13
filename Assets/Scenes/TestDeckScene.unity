@@ -674,6 +674,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4034451391905723867, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
   m_PrefabInstance: {fileID: 857588419}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &996833008
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 305224692841724488, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: zoneName
+      value: Stack
+      objectReference: {fileID: 0}
+    - target: {fileID: 305224692841724488, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: showBackground
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 305224692841724488, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: zoneRuntimeSet
+      value: 
+      objectReference: {fileID: 11400000, guid: d7d0661dd66fbe84f88cf980a621a8f1, type: 2}
+    - target: {fileID: 305224692841724488, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: isBackgroundVisible
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475636102598117795, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_Name
+      value: StackZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12.436199
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606761197262174896, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1954163627801562340, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: 8be8c987c99c3e840b18665054da1c0c, type: 3}
 --- !u!1001 &1125148454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1001,6 +1081,7 @@ MonoBehaviour:
   exileZone: {fileID: 11400000, guid: de989f0683b637c42a86b2bb5a619c6a, type: 2}
   battlefieldZone: {fileID: 11400000, guid: 255211f5c2647f84bb7049fd0236e89b, type: 2}
   handZone: {fileID: 11400000, guid: f6fc44e383fa1b7469b27b7ae7114921, type: 2}
+  stackZone: {fileID: 11400000, guid: d7d0661dd66fbe84f88cf980a621a8f1, type: 2}
 --- !u!4 &1618818608
 Transform:
   m_ObjectHideFlags: 0
@@ -1355,4 +1436,5 @@ SceneRoots:
   - {fileID: 1125148454}
   - {fileID: 71893348}
   - {fileID: 1979118645}
+  - {fileID: 996833008}
   - {fileID: 1560843306}
