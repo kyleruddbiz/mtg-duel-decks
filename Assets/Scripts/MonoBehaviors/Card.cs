@@ -22,7 +22,7 @@ namespace VoidScribe.MtgDuelDecks
 
         // TODO - I wonder if these are just used for query. If so, is it worth internalizing the query logic in card?
         public CardTypes CardTypes => cardData.CardTypes;
-        public CardSuperType[] CardSuperTypes => cardData.CardSuperTypes;
+        public CardSuperTypes CardSuperTypes => cardData.CardSuperTypes;
         public CardSubType[] CardSubTypes => cardData.CardSubTypes;
         public ManaCost[] ManaCosts => cardData.ManaCosts;
         public CardTraits CardTraits { get; private set; }

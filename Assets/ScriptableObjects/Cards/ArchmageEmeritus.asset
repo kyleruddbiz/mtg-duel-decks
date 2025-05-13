@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fcc9ad0829a797408b8adcd53a75f29, type: 3}
   m_Name: ArchmageEmeritus
   m_EditorClassIdentifier: 
-  <IsWip>k__BackingField: 0
+  <IsWip>k__BackingField: 1
   <CardImages>k__BackingField:
   - {fileID: -2676779466967555406, guid: 585de5b5660ebcd4f838ccd504fbc859, type: 3}
   - {fileID: -7975453983658932202, guid: 4ca57b24eddc765499f58c569fe1970c, type: 3}
   - {fileID: -615331606065602101, guid: e27207b202a5aa547a48bde56ff6a64f, type: 3}
   <CardName>k__BackingField: Archmage Emeritus
-  <CardType>k__BackingField: {fileID: 11400000, guid: bc537cce4133c274ba4c549b98510373, type: 2}
-  <CardSuperTypes>k__BackingField: []
-  <CardSubTypes>k__BackingField:
-  - {fileID: 11400000, guid: cdc79f991907c70458e32b03609de4c2, type: 2}
-  - {fileID: 11400000, guid: 1f3e63b6a9535ff498718d8a1986b309, type: 2}
   <ManaCosts>k__BackingField:
   - <Color>k__BackingField: 5
     <Amount>k__BackingField: 2
   - <Color>k__BackingField: 1
     <Amount>k__BackingField: 2
+  <CardTypes>k__BackingField: 1
+  <CardSuperTypes>k__BackingField: 0
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: cdc79f991907c70458e32b03609de4c2, type: 2}
+  - {fileID: 11400000, guid: 1f3e63b6a9535ff498718d8a1986b309, type: 2}
   <CardTraits>k__BackingField: 0
   <Commands>k__BackingField:
   - <IsWip>k__BackingField: 1
@@ -42,13 +42,13 @@ MonoBehaviour:
       boolValue: 0
     queries:
     - isPermanent: 0
-      cardType: {fileID: 11400000, guid: bf3c36e23285c2e45b15f200bb54a50a, type: 2}
+      cardTypes: 0
       <IsNegated>k__BackingField: 0
       superTypes: []
       subTypes: []
       colors: []
     - isPermanent: 0
-      cardType: {fileID: 11400000, guid: b465cec300c4ffa4ab2d0a847652fe74, type: 2}
+      cardTypes: 0
       <IsNegated>k__BackingField: 0
       superTypes: []
       subTypes: []

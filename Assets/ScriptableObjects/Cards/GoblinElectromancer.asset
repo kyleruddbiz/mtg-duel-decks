@@ -18,15 +18,15 @@ MonoBehaviour:
   - {fileID: -8662353138705882447, guid: cb2c27b4c14e0f440bf05129ef8ded5b, type: 3}
   - {fileID: -5709102682279118055, guid: 1291bad4acbe6884abe156fae0fad9db, type: 3}
   <CardName>k__BackingField: Goblin Electromancer
-  <CardType>k__BackingField: {fileID: 11400000, guid: bc537cce4133c274ba4c549b98510373, type: 2}
-  <CardSuperTypes>k__BackingField: []
-  <CardSubTypes>k__BackingField:
-  - {fileID: 11400000, guid: d3867846b937bf749a1f111986ce589e, type: 2}
-  - {fileID: 11400000, guid: 1f3e63b6a9535ff498718d8a1986b309, type: 2}
   <ManaCosts>k__BackingField:
   - <Color>k__BackingField: 1
     <Amount>k__BackingField: 1
   - <Color>k__BackingField: 3
     <Amount>k__BackingField: 1
+  <CardTypes>k__BackingField: 0
+  <CardSuperTypes>k__BackingField: 0
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: d3867846b937bf749a1f111986ce589e, type: 2}
+  - {fileID: 11400000, guid: 1f3e63b6a9535ff498718d8a1986b309, type: 2}
   <CardTraits>k__BackingField: 0
   <Commands>k__BackingField: []

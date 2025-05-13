@@ -17,15 +17,15 @@ MonoBehaviour:
   - {fileID: 8239433782798592647, guid: a1e8fea96fda5244f98bad0ac0edc068, type: 3}
   - {fileID: 3091713732821390428, guid: 3c35084811991614cb745347cfac3373, type: 3}
   <CardName>k__BackingField: Archon of Cruelty
-  <CardType>k__BackingField: {fileID: 11400000, guid: bc537cce4133c274ba4c549b98510373, type: 2}
-  <CardSuperTypes>k__BackingField: []
-  <CardSubTypes>k__BackingField:
-  - {fileID: 11400000, guid: 7b9c6464b004ee1458d91580dc1b3b93, type: 2}
   <ManaCosts>k__BackingField:
   - <Color>k__BackingField: 5
     <Amount>k__BackingField: 6
   - <Color>k__BackingField: 2
     <Amount>k__BackingField: 2
+  <CardTypes>k__BackingField: 1
+  <CardSuperTypes>k__BackingField: 0
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: 7b9c6464b004ee1458d91580dc1b3b93, type: 2}
   <CardTraits>k__BackingField: 1
   <Commands>k__BackingField: []
   <Power>k__BackingField: 6
