@@ -3,16 +3,13 @@ using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
-    // TODO - I want to make a property drawer for this CardType with isPermanent override.
-    // Hide cardType if isPermanent is true.
     [Serializable]
     public class CardQuery : ParameterBasedQuery<Card>
     {
-        [Tooltip("Will override cardType.")][SerializeField] private bool isPermanent;
-        [SerializeField] private CardTypes cardTypes;
-        [field: SerializeField] protected override bool IsNegated { get; set; }
+        protected override bool IsNegated { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        [SerializeField] private CardSuperTypeQueryParameter[] superTypes;
+        [SerializeField] private CardTypeQueryParameter cardTypes;
+        [SerializeField] private CardSuperTypeQueryParameter superTypes;
         [SerializeField] private CardSubTypeQueryParameter[] subTypes;
         [SerializeField] private CardColorQueryParameter[] colors;
 

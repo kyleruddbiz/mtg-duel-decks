@@ -39,7 +39,17 @@ namespace VoidScribe.MtgDuelDecks
                     return new[] { Color.Colorless };
                 }
 
-                return ManaCosts.Select(manaCost => manaCost.Color);
+                IEnumerable<Color> colors = ManaCosts
+                   .Select(manaCost => manaCost.Color)
+                   .Where(color => color != Color.Colorless)
+                   .Distinct();
+
+                if (!colors.Any())
+                {
+                    return new[] { Color.Colorless };
+                }
+
+                return colors;
             }
         }
 

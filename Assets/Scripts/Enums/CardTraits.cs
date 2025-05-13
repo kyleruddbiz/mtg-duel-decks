@@ -14,9 +14,11 @@ namespace VoidScribe.MtgDuelDecks
         Reach = 32,
         Indestructible = 64,
         Hexproof = 128,
+        HexproofUnlessGreen = 4096,
         Vigilance = 256,
         Defender = 512,
         Devoid = 1024,
         CantBeCountered = 2048,
+        // Next 8192,
     }
 }
