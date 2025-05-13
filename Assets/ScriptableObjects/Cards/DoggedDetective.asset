@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac1fe9e819b8db74ea964982d8c33ef6, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fcc9ad0829a797408b8adcd53a75f29, type: 3}
   m_Name: DoggedDetective
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
@@ -23,10 +23,12 @@ MonoBehaviour:
     <Amount>k__BackingField: 1
   - <Color>k__BackingField: 2
     <Amount>k__BackingField: 1
-  <CardTypes>k__BackingField: 0
+  <CardTypes>k__BackingField: 1
   <CardSuperTypes>k__BackingField: 0
   <CardSubTypes>k__BackingField:
   - {fileID: 11400000, guid: cdc79f991907c70458e32b03609de4c2, type: 2}
   - {fileID: 11400000, guid: 40a7a625c1aac61439cc0c3314dc947b, type: 2}
   <CardTraits>k__BackingField: 0
   <Commands>k__BackingField: []
+  <Power>k__BackingField: 0
+  <Toughness>k__BackingField: 0
