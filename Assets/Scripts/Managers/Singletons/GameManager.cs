@@ -13,6 +13,7 @@ namespace VoidScribe.MtgDuelDecks
         private enum State
         {
             Setup,
+            WaitingForInput,
             ReadyToCast,
             Casting,
         }
@@ -67,19 +68,25 @@ namespace VoidScribe.MtgDuelDecks
 
                 case State.Setup:
                     break;
+
+                case State.WaitingForInput:
+                    break;
             }
         }
 
         private async Awaitable HandleCastingAsync()
         {
-            SetState(State.Casting);
-
             bool didCastSpell = false;
 
             do
             {
+                SetState(State.WaitingForInput);
+
                 Card targetCard = await ChooseTargetCardAsync();
-                didCastSpell = TryCastSpell(targetCard);
+
+                SetState(State.Casting);
+
+                didCastSpell = await TryCastSpellAsync(targetCard);
             }
             while (!didCastSpell);
 
@@ -146,7 +153,7 @@ namespace VoidScribe.MtgDuelDecks
 
         // TODO - Just for testing.
         // This approach would be insta-spaghetti.
-        public bool TryCastSpell(Card card)
+        public async Awaitable<bool> TryCastSpellAsync(Card card)
         {
             // TODO - Put the spell on the stack.
             // TODO - Check if card has decisions that need to be made (mode, targetting, etc.)
@@ -160,6 +167,9 @@ namespace VoidScribe.MtgDuelDecks
                     // TODO - Trigger the enter the battlefield event.
                     // TODO - Trigger actions
                     // TODO - Register listeners
+
+                    await card.ExecuteCommandsAsync();
+
                     return true;
                 }
                 else
@@ -173,16 +183,19 @@ namespace VoidScribe.MtgDuelDecks
             return false;
         }
 
-        private AwaitableCompletionSource<Card> targetCardCompletionSource;
+        private readonly AwaitableCompletionSource<Card> targetCardCompletionSource = new();
 
         public async Awaitable<Card> ChooseTargetCardAsync()
         {
-            targetCardCompletionSource = new AwaitableCompletionSource<Card>();
-
             // TODO - Use an input query to show valid choices for the target.
             // TODO - Show the targetting UI.
 
-            return await targetCardCompletionSource.Awaitable;
+            return await targetCardCompletionSource.ResetAndReturnAwaitable();
+
+            //Awaitable<Card> awaitable =  targetCardCompletionSource.Awaitable;
+            //targetCardCompletionSource.Reset();
+
+            //return await awaitable;
 
             // TODO - Validate card matches query? or do I do it in choose target instead?
         }
@@ -195,6 +208,13 @@ namespace VoidScribe.MtgDuelDecks
         public void ReturnToHand(Card card)
         {
             card.MoveToZone(handZone);
+        }
+
+        public void DestroyCard(Card card)
+        {
+            card.MoveToZone(graveyardZone);
+
+            // TODO - Trigger the destroy event.
         }
     }
 }

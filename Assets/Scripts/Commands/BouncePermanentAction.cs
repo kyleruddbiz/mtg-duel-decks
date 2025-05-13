@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
@@ -10,7 +11,7 @@ namespace VoidScribe.MtgDuelDecks
         // Then allow them to select one.
         [SerializeField] private Card target;
 
-        protected override void Execute(Card sourceCard)
+        protected override Awaitable ExecuteAsync(Card sourceCard)
         {
             // how do i get the target?
             // Want a way to request a target, using the query.
@@ -21,6 +22,8 @@ namespace VoidScribe.MtgDuelDecks
             //}
 
             GameManager.Instance.ReturnToHand(target);
+
+            return AwaitableUtility.CompletedAwaitable;
         }
     }
 }

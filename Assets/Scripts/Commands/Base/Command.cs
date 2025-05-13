@@ -13,11 +13,11 @@ namespace VoidScribe.MtgDuelDecks
         [SerializeField] private CommandParameter[] parameters;
         [SerializeField] private CardQuery[] queries;
 
-        public void Execute(Card sourceCard)
+        public async Awaitable ExecuteAsync(Card sourceCard)
         {
             Debug.Log("Executing command: " + action.name);
 
-            action.Execute(sourceCard, parameters);
+            await action.ExecuteAsync(sourceCard, parameters);
         }
     }
 }

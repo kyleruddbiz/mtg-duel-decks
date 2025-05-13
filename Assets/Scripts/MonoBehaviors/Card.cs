@@ -118,6 +118,14 @@ namespace VoidScribe.MtgDuelDecks
             CardTraits &= ~toRemove;
         }
 
+        public async Awaitable ExecuteCommandsAsync()
+        {
+            foreach (Command command in Commands)
+            {
+                await command.ExecuteAsync(this);
+            }
+        }
+
         public override string ToString()
         {
             return $"{(IsWip() ? "[WIP]" : "")}{cardData.name} ({imageIndex})";
