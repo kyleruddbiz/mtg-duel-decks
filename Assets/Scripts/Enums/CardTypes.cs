@@ -14,21 +14,16 @@ namespace VoidScribe.MtgDuelDecks
         Sorcery = 32,
         Instant = 64,
         Battle = 128,
+
+        AllPermanents = Creature | Enchantment | Artifact | Planeswalker | Land | Battle,
+        AllNonpermanents = Sorcery | Instant,
     }
 
     public static class CardTypesExtensions
     {
-        private const CardTypes PermanentCardTypes =
-            CardTypes.Creature
-            | CardTypes.Enchantment
-            | CardTypes.Artifact
-            | CardTypes.Planeswalker
-            | CardTypes.Land
-            | CardTypes.Battle;
-
         public static bool IsPermanent(this CardTypes cardTypes)
         {
-            return (cardTypes & PermanentCardTypes) != 0;
+            return (cardTypes & CardTypes.AllPermanents) != 0;
         }
     }
 }

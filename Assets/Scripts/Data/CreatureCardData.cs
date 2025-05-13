@@ -9,6 +9,14 @@ namespace VoidScribe.MtgDuelDecks
 
         private void OnValidate()
         {
+            if ((int)CardTypes == -1 // Everything
+                || CardTypes == CardTypes.AllPermanents
+                || CardTypes == CardTypes.AllNonpermanents
+                || CardTypes == (CardTypes.Creature | CardTypes.AllNonpermanents))
+            {
+                CardTypes = CardTypes.None;
+            }
+
             CardTypes |= CardTypes.Creature;
         }
     }

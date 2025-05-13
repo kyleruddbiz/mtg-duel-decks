@@ -53,22 +53,6 @@ namespace VoidScribe.MtgDuelDecks
             CardTraits = cardData.CardTraits;
         }
 
-        private void OnValidate()
-        {
-            if (cardData != null)
-            {
-                if (cardData.CardImages == null)
-                {
-                    throw new System.ArgumentNullException(nameof(cardData.CardImages));
-                }
-
-                if (imageIndex < 0 || imageIndex >= cardData.CardImages.Length)
-                {
-                    throw new System.ArgumentException("Image index is out of bounds for card data.");
-                }
-            }
-        }
-
         private void OnMouseOver()
         {
             //Debug.Log("Mouse over - " + ToString());
