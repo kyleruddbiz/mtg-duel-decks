@@ -168,7 +168,7 @@ namespace VoidScribe.MtgDuelDecks
                     // TODO - Trigger actions
                     // TODO - Register listeners
 
-                    await card.ExecuteCommandsAsync();
+                    //await card.ExecuteCommandsAsync();
 
                     if (card.IsPermanent)
                     {

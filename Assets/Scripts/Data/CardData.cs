@@ -18,7 +18,7 @@ namespace VoidScribe.MtgDuelDecks
         [field: SerializeField] public CardSubType[] CardSubTypes { get; private set; }
 
         [field: SerializeField] public CardTraits CardTraits { get; private set; }
-        [field: SerializeField] public Command[] Commands { get; private set; }
+        //[field: SerializeField] public Command[] Commands { get; private set; }
 
         // TODO (Kind of) - Activated abilities and static abilities
 

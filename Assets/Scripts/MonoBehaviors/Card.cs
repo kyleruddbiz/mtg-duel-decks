@@ -26,7 +26,7 @@ namespace VoidScribe.MtgDuelDecks
         public CardSubType[] CardSubTypes => cardData.CardSubTypes;
         public ManaCost[] ManaCosts => cardData.ManaCosts;
         public CardTraits CardTraits { get; private set; }
-        public Command[] Commands => cardData.Commands;
+        //public Command[] Commands => cardData.Commands;
 
         public bool IsPermanent => cardData.CardTypes.IsPermanent();
 
@@ -116,13 +116,13 @@ namespace VoidScribe.MtgDuelDecks
             CardTraits &= ~toRemove;
         }
 
-        public async Awaitable ExecuteCommandsAsync()
-        {
-            foreach (Command command in Commands)
-            {
-                await command.ExecuteAsync(this);
-            }
-        }
+        //public async Awaitable ExecuteCommandsAsync()
+        //{
+        //    foreach (Command command in Commands)
+        //    {
+        //        await command.ExecuteAsync(this);
+        //    }
+        //}
 
         public override string ToString()
         {
@@ -136,13 +136,13 @@ namespace VoidScribe.MtgDuelDecks
                 return true;
             }
 
-            foreach (Command command in Commands)
-            {
-                if (command.IsWip)
-                {
-                    return true;
-                }
-            }
+            //foreach (Command command in Commands)
+            //{
+            //    if (command.IsWip)
+            //    {
+            //        return true;
+            //    }
+            //}
 
             return false;
         }
