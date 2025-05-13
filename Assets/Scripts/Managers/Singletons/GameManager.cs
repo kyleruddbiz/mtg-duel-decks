@@ -170,7 +170,7 @@ namespace VoidScribe.MtgDuelDecks
 
                     await card.ExecuteCommandsAsync();
 
-                    if (card.CardType.IsPermanent)
+                    if (card.IsPermanent)
                     {
                         card.MoveToZone(battlefieldZone);
                     }

@@ -19,12 +19,16 @@ namespace VoidScribe.MtgDuelDecks
         public ZoneRuntimeSet CurrentZone { get; set; }
 
         public string CardName => cardData.CardName;
-        public CardType CardType => cardData.CardType;
+
+        // TODO - I wonder if these are just used for query. If so, is it worth internalizing the query logic in card?
+        public CardTypes CardTypes => cardData.CardTypes;
         public CardSuperType[] CardSuperTypes => cardData.CardSuperTypes;
         public CardSubType[] CardSubTypes => cardData.CardSubTypes;
         public ManaCost[] ManaCosts => cardData.ManaCosts;
         public CardTraits CardTraits { get; private set; }
         public Command[] Commands => cardData.Commands;
+
+        public bool IsPermanent => cardData.CardTypes.IsPermanent();
 
         public IEnumerable<Color> Colors
         {

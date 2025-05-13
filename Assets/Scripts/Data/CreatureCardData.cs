@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 
-namespace VoidScribe.MtgDuelDecks.Assets.Scripts.Data
+namespace VoidScribe.MtgDuelDecks
 {
     public class CreatureCardData : CardData
     {
-        public override CardType CardType => base.CardType;
-
         [field: SerializeField] public int Power { get; private set; }
         [field: SerializeField] public int Toughness { get; private set; }
+
+        private void OnValidate()
+        {
+            CardTypes |= CardTypes.Creature;
+        }
     }
 }

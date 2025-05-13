@@ -12,9 +12,7 @@ namespace VoidScribe.MtgDuelDecks
         // Fields
         [field: SerializeField] public string CardName { get; private set; }
 
-        // NODO - Choosing to ignore combo types for now (Artifact Creature).
-        // They don't show up in these duel decks.
-        [field: SerializeField] public virtual CardType CardType { get; private set; }
+        [field: SerializeField] public CardTypes CardTypes { get; protected set; }
         [field: SerializeField] public CardSuperType[] CardSuperTypes { get; private set; }
         [field: SerializeField] public CardSubType[] CardSubTypes { get; private set; }
         [field: SerializeField] public ManaCost[] ManaCosts { get; private set; }

@@ -9,7 +9,7 @@ namespace VoidScribe.MtgDuelDecks
     public class CardQuery : ParameterBasedQuery<Card>
     {
         [Tooltip("Will override cardType.")][SerializeField] private bool isPermanent;
-        [SerializeField] private CardType cardType;
+        [SerializeField] private CardTypes cardTypes;
         [field: SerializeField] protected override bool IsNegated { get; set; }
 
         [SerializeField] private CardSuperTypeQueryParameter[] superTypes;
@@ -18,34 +18,36 @@ namespace VoidScribe.MtgDuelDecks
 
         protected override bool IsMatchInternal(Card source)
         {
-            if (isPermanent)
-            {
-                if (!source.CardType.IsPermanent)
-                {
-                    return false;
-                }
-            }
-            else if (source.CardType != cardType)
-            {
-                return false;
-            }
+            throw new NotImplementedException();
 
-            if (superTypes.Length != 0 && !source.CardSuperTypes.ContainsAll(superTypes))
-            {
-                return false;
-            }
+            //if (isPermanent)
+            //{
+            //    if (!source.IsPermanent)
+            //    {
+            //        return false;
+            //    }
+            //}
+            //else if (source.CardType != cardType)
+            //{
+            //    return false;
+            //}
 
-            if (subTypes.Length != 0 && !source.CardSubTypes.ContainsAll(subTypes))
-            {
-                return false;
-            }
+            //if (superTypes.Length != 0 && !source.CardSuperTypes.ContainsAll(superTypes))
+            //{
+            //    return false;
+            //}
 
-            if (colors.Length != 0 && !source.Colors.ContainsAll(colors))
-            {
-                return false;
-            }
+            //if (subTypes.Length != 0 && !source.CardSubTypes.ContainsAll(subTypes))
+            //{
+            //    return false;
+            //}
 
-            return true;
+            //if (colors.Length != 0 && !source.Colors.ContainsAll(colors))
+            //{
+            //    return false;
+            //}
+
+            //return true;
         }
     }
 }
