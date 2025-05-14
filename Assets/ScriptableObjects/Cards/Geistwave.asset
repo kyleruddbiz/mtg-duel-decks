@@ -29,6 +29,5 @@ MonoBehaviour:
   <CardTraits>k__BackingField: 0
   <SpellAbility>k__BackingField:
     <IsWip>k__BackingField: 1
-    kind: 0
-    <Action>k__BackingField: {fileID: 0}
-    query: 0
+    <Action>k__BackingField: {fileID: 11400000, guid: 5cfe07bc6204e3042a5ea333918b45f0, type: 2}
+    query: -1

@@ -276,5 +276,10 @@ namespace VoidScribe.MtgDuelDecks
 
             // TODO - Trigger the destroy event.
         }
+
+        public void BounceCard(Card card)
+        {
+            card.MoveToZone(handZone);
+        }
     }
 }
