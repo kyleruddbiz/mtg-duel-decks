@@ -83,7 +83,7 @@ namespace VoidScribe.MtgDuelDecks
             {
                 SetState(State.WaitingForInput);
 
-                Card targetCard = await ChooseTargetCardAsync();
+                Card targetCard = await ChooseTargetCardAsync(cardQuery: null);
 
                 SetState(State.Casting);
 
@@ -168,7 +168,7 @@ namespace VoidScribe.MtgDuelDecks
                     // TODO - Trigger actions
                     // TODO - Register listeners
 
-                    //await card.ExecuteCommandsAsync();
+                    await card.ExecuteSpellAbilityAsync();
 
                     if (card.IsPermanent)
                     {
@@ -192,26 +192,35 @@ namespace VoidScribe.MtgDuelDecks
             return false;
         }
 
-        private readonly AwaitableCompletionSource<Card> targetCardCompletionSource = new();
+        private readonly AwaitableCompletionSource<Card> targetSelectionCompletionSource = new();
+        private Color[] currentQuery;
 
-        public async Awaitable<Card> ChooseTargetCardAsync()
+        public async Awaitable<Card> ChooseTargetCardAsync(Color[] cardQuery)
         {
-            // TODO - Use an input query to show valid choices for the target.
-            // TODO - Show the targetting UI.
+            currentQuery = cardQuery ?? System.Array.Empty<Color>();
 
-            return await targetCardCompletionSource.ResetAndReturnAwaitable();
-
-            //Awaitable<Card> awaitable =  targetCardCompletionSource.Awaitable;
-            //targetCardCompletionSource.Reset();
-
-            //return await awaitable;
-
-            // TODO - Validate card matches query? or do I do it in choose target instead?
+            return await targetSelectionCompletionSource.ResetAndReturnAwaitable();
         }
 
-        public void SetAsTarget(Card card)
+        public bool TrySetAsTarget(Card card)
         {
-            targetCardCompletionSource.SetResult(card);
+            if (currentQuery == null || currentQuery.Length == 0)
+            {
+                targetSelectionCompletionSource.SetResult(card);
+                return true;
+            }
+
+            foreach (Color color in currentQuery)
+            {
+                if (card.Colors.Contains(color))
+                {
+                    targetSelectionCompletionSource.SetResult(card);
+
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void ReturnToHand(Card card)

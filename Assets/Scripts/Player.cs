@@ -3,7 +3,7 @@ using UnityEngine;
 namespace VoidScribe.MtgDuelDecks
 {
     [CreateAssetMenu(fileName = "Player", menuName = "VoidScribe/Player")]
-    public class Player : ScriptableObject
+    public class Player : ScriptableObject, ITarget
     {
         [field: SerializeField] public string PlayerName { get; private set; }
         [field: SerializeField] public DeckData DeckData { get; private set; }

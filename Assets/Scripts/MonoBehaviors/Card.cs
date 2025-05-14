@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
-    public class Card : MonoBehaviour
+    public class Card : MonoBehaviour, ITarget
     {
         [Header(HeaderConstants.Internal)]
         [SerializeField] private SpriteRenderer visual;
@@ -77,7 +77,7 @@ namespace VoidScribe.MtgDuelDecks
         {
             // TODO - Just for testing right now.
 
-            GameManager.Instance.SetAsTarget(this);
+            GameManager.Instance.TrySetAsTarget(this);
         }
 
         public void Initialize(Player controllingPlayer, CardData cardData, int imageIndex)
@@ -114,6 +114,11 @@ namespace VoidScribe.MtgDuelDecks
         public void RemoveTraits(CardTraits toRemove)
         {
             CardTraits &= ~toRemove;
+        }
+
+        public async Awaitable ExecuteSpellAbilityAsync()
+        {
+            await cardData.SpellAbility.ExecuteAsync();
         }
 
         //public async Awaitable ExecuteCommandsAsync()
