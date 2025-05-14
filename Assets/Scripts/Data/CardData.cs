@@ -2,8 +2,7 @@ using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
-    [CreateAssetMenu(fileName = "Card", menuName = "VoidScribe/Data/Card")]
-    public class CardData : ScriptableObject
+    public abstract class CardData : ScriptableObject
     {
         // Internal
         [field: SerializeField] public bool IsWip { get; private set; } = true;
@@ -15,24 +14,10 @@ namespace VoidScribe.MtgDuelDecks
         [field: Tooltip("Use Colorless to represent generic mana costs.")]
         [field: SerializeField] public ManaCost[] ManaCosts { get; private set; }
 
-        [field: SerializeField] public CardTypes CardTypes { get; protected set; }
-        [field: SerializeField] public CardSuperTypes CardSuperTypes { get; private set; }
-        [field: SerializeField] public CardSubType[] CardSubTypes { get; private set; }
+        public abstract CardTypes CardTypes { get; }
+        public abstract CardSuperTypes CardSuperTypes { get; protected set; }
+        public abstract CardSubType[] CardSubTypes { get; protected set; }
 
-        [field: SerializeField] public CardTraits CardTraits { get; private set; }
-        [field: SerializeField] public SingleTargetSpellAbility SpellAbility { get; private set; }
-        //[field: SerializeField] public Command[] Commands { get; private set; }
-
-        // TODO (Kind of) - Activated abilities and static abilities
-
-        private void OnValidate()
-        {
-            if ((int)CardTypes == -1 // Everything
-                || CardTypes == CardTypes.AllPermanents
-                || CardTypes == CardTypes.AllNonpermanents)
-            {
-                CardTypes = CardTypes.None;
-            }
-        }
+        public abstract CardTraits CardTraits { get; protected set; }
     }
 }

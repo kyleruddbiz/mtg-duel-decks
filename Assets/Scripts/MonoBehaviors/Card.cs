@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using UnityEngine;
 
@@ -98,9 +96,16 @@ namespace VoidScribe.MtgDuelDecks
 
         public async Awaitable ExecuteSpellAbilityAsync()
         {
-            Debug.Log($"Executing spell ability for {cardData.name} - {cardData.SpellAbility}");
+            if (cardData is SpellCardData spellCardData)
+            {
+                Debug.Log($"Executing spell ability for {spellCardData.name} - {spellCardData.SpellAbility}");
 
-            await cardData.SpellAbility.ExecuteAsync();
+                await spellCardData.SpellAbility.ExecuteAsync();
+            }
+            else
+            {
+                Debug.LogError($"Card {cardData.name} does not have a spell ability.");
+            }
         }
 
         public override string ToString()
