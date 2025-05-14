@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
-    [System.Serializable]
+    [Serializable]
     public class CardSet
     {
         [field: SerializeField] public CardData CardData { get; private set; }
@@ -14,7 +15,7 @@ namespace VoidScribe.MtgDuelDecks
     public class DeckData : ScriptableObject
     {
         [field: SerializeField] public string DeckName { get; private set; }
-        [field: SerializeField] public Sprite[] SleeveImages { get; private set; }
+        [field: SerializeField] public SpriteSetData SleeveImages { get; private set; }
         [field: SerializeField] public List<CardSet> CardSets { get; private set; }
     }
 }

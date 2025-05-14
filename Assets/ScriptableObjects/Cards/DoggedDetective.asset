@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: DoggedDetective
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
-  <CardImages>k__BackingField:
-  - {fileID: -936071043610324972, guid: c76bd311935200e43b69f89525e95d59, type: 3}
-  - {fileID: -6503924839076034406, guid: 2ba52516a512c5a448cb248c860e0f16, type: 3}
-  - {fileID: 2868678236565985782, guid: ae18b6c7e57ba9a45b1908b6d0d81d77, type: 3}
+  <CardImages>k__BackingField: {fileID: 11400000, guid: 816fdf6bd4a72fb4d805474dc609c6a8, type: 2}
   <CardName>k__BackingField: Dogged Detective
   <ManaCost>k__BackingField:
     colors: 36

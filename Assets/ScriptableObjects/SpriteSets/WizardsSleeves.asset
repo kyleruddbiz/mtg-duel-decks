@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b195f58aa328d664b996c04366724724, type: 3}
+  m_Name: WizardsSleeves
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 3186379492514274234, guid: 971b18ccec7e4874b8e04d2bfd2f642b, type: 3}
+  - {fileID: 7507612952671205402, guid: d3b0c2079569fb348befbf209e5deca1, type: 3}
+  - {fileID: -1649443092478433773, guid: 879f303015d422a4ab3b8feb212d9f5c, type: 3}
+  - {fileID: -6449724713543704054, guid: 8d5e7e58ca13cc649ac7b5e8974870fc, type: 3}
+  - {fileID: 4522060874930552914, guid: 0d61ab170fb98c8478ee2efd0c570519, type: 3}
+  - {fileID: -7218532369324675730, guid: 03920c02ff34cb248bf998d3e5ed94a1, type: 3}
+  - {fileID: 609705684960280809, guid: 365c53d7e7b55f841997d91592db8a41, type: 3}
+  - {fileID: -7497982110806057114, guid: 1a0adbc77bb61dd4dbfdc32a4ad104ad, type: 3}

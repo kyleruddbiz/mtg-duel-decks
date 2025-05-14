@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b195f58aa328d664b996c04366724724, type: 3}
+  m_Name: DoggedDetective
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -936071043610324972, guid: c76bd311935200e43b69f89525e95d59, type: 3}
+  - {fileID: -6503924839076034406, guid: 2ba52516a512c5a448cb248c860e0f16, type: 3}
+  - {fileID: 2868678236565985782, guid: ae18b6c7e57ba9a45b1908b6d0d81d77, type: 3}

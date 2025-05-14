@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: TestDeck
   m_EditorClassIdentifier: 
   <DeckName>k__BackingField: Test Deck
-  <SleeveImages>k__BackingField:
-  - {fileID: 7796798138125073859, guid: 682a5c5aa644d6a4c86ad8e25c8b0c30, type: 3}
+  <SleeveImages>k__BackingField: {fileID: 11400000, guid: 1c726806db1aa8346b2f7a3d67cbec9d, type: 2}
   <CardSets>k__BackingField:
   - <CardData>k__BackingField: {fileID: 11400000, guid: 66d5abf965d1fb14d9595725a900cad0, type: 2}
     <Count>k__BackingField: 1

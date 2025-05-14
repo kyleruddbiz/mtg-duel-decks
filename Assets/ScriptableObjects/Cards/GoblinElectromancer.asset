@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: GoblinElectromancer
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
-  <CardImages>k__BackingField:
-  - {fileID: -6888929939048746268, guid: 4a900d6bb52f58548b60793edf9e00f3, type: 3}
-  - {fileID: -8662353138705882447, guid: cb2c27b4c14e0f440bf05129ef8ded5b, type: 3}
-  - {fileID: -5709102682279118055, guid: 1291bad4acbe6884abe156fae0fad9db, type: 3}
+  <CardImages>k__BackingField: {fileID: 11400000, guid: 884e7b476f1727545a4555f4825fcb98, type: 2}
   <CardName>k__BackingField: Goblin Electromancer
   <ManaCost>k__BackingField:
     colors: 10

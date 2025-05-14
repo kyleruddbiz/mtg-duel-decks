@@ -4,12 +4,9 @@ namespace VoidScribe.MtgDuelDecks
 {
     public abstract class CardData : ScriptableObject
     {
-        [field: Header(HeaderConstants.Internal)]
         [field: SerializeField] public bool IsWip { get; private set; } = true;
-        [field: SerializeField] public Sprite[] CardImages { get; private set; }
-
-        [field: Header(HeaderConstants.Fields)]
         [field: SerializeField] public string CardName { get; private set; }
+        [field: SerializeField] public SpriteSetData CardImages { get; private set; }
         [field: SerializeField] public ManaCost ManaCost { get; private set; }
 
         public abstract CardTypes CardTypes { get; }
