@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1fe9e819b8db74ea964982d8c33ef6, type: 3}
   m_Name: DoomBlade
   m_EditorClassIdentifier: 
-  <IsWip>k__BackingField: 0
+  <IsWip>k__BackingField: 1
   <CardImages>k__BackingField:
   - {fileID: 4823194619148568744, guid: 533e85917ac31974f959144e998417e7, type: 3}
   - {fileID: 7394109268693881409, guid: db4154f30cdda774092ed6580744db42, type: 3}
@@ -20,26 +20,11 @@ MonoBehaviour:
   - {fileID: -8224220048330781870, guid: 5b6fbc13be7240b469cf38ddad6d2dad, type: 3}
   <CardName>k__BackingField: Doom Blade
   <ManaCosts>k__BackingField:
-  - <Color>k__BackingField: 5
+  - <Color>k__BackingField: 0
     <Amount>k__BackingField: 1
-  - <Color>k__BackingField: 2
+  - <Color>k__BackingField: 3
     <Amount>k__BackingField: 1
   <CardTypes>k__BackingField: 64
   <CardSuperTypes>k__BackingField: 0
   <CardSubTypes>k__BackingField: []
   <CardTraits>k__BackingField: 0
-  <Commands>k__BackingField:
-  - <IsWip>k__BackingField: 1
-    action: {fileID: 11400000, guid: 8bb8688dc62a4064a9bba847dfef71b7, type: 2}
-    when:
-    - {fileID: 0}
-    parameters: []
-    queries:
-    - isPermanent: 0
-      cardTypes: 0
-      <IsNegated>k__BackingField: 0
-      superTypes: []
-      subTypes: []
-      colors:
-      - <Value>k__BackingField: 2
-        <IsNegated>k__BackingField: 1

@@ -19,9 +19,9 @@ MonoBehaviour:
   - {fileID: 2868678236565985782, guid: ae18b6c7e57ba9a45b1908b6d0d81d77, type: 3}
   <CardName>k__BackingField: Dogged Detective
   <ManaCosts>k__BackingField:
-  - <Color>k__BackingField: 5
+  - <Color>k__BackingField: 0
     <Amount>k__BackingField: 1
-  - <Color>k__BackingField: 2
+  - <Color>k__BackingField: 3
     <Amount>k__BackingField: 1
   <CardTypes>k__BackingField: 1
   <CardSuperTypes>k__BackingField: 0
@@ -29,6 +29,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cdc79f991907c70458e32b03609de4c2, type: 2}
   - {fileID: 11400000, guid: 40a7a625c1aac61439cc0c3314dc947b, type: 2}
   <CardTraits>k__BackingField: 0
-  <Commands>k__BackingField: []
-  <Power>k__BackingField: 0
-  <Toughness>k__BackingField: 0
+  <Power>k__BackingField: 2
+  <Toughness>k__BackingField: 1
