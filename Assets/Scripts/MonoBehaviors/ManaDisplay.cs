@@ -13,7 +13,7 @@ namespace VoidScribe.MtgDuelDecks
 
         [Header(HeaderConstants.Fields)]
         [SerializeField] private ManaManager manaManager;
-        [SerializeField] private ManaColor color;
+        [SerializeField] private MtgColor color;
         [SerializeField] private Sprite symbolSprite;
 
         private void Awake()

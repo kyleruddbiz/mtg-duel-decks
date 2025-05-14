@@ -7,7 +7,7 @@ namespace VoidScribe.MtgDuelDecks
     public class SingleTargetSpellAbility : SpellAbility<SingleTargetAbilityAction>
     {
         [field: SerializeField] protected override SingleTargetAbilityAction Action { get; set; }
-        [SerializeField] private CardColors query;
+        [SerializeField] private MtgColors query;
 
         protected override async Awaitable ExecuteInternalAsync()
         {

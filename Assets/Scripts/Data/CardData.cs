@@ -10,9 +10,7 @@ namespace VoidScribe.MtgDuelDecks
 
         [field: Header(HeaderConstants.Fields)]
         [field: SerializeField] public string CardName { get; private set; }
-
-        [field: Tooltip("Use Colorless to represent generic mana costs.")]
-        [field: SerializeField] public ManaCost[] ManaCosts { get; private set; }
+        [field: SerializeField] public ManaCost ManaCost { get; private set; }
 
         public abstract CardTypes CardTypes { get; }
         public abstract CardSuperTypes CardSuperTypes { get; protected set; }

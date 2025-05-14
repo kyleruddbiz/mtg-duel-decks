@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: color
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: manaManager
@@ -984,7 +984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: color
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: manaManager
@@ -1228,7 +1228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: color
-      value: 5
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: manaManager

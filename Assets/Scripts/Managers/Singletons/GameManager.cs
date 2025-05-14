@@ -16,7 +16,7 @@ namespace VoidScribe.MtgDuelDecks
             Setup,
             WaitingForInput,
             ReadyToCast,
-            Casting,
+            CastingSpell,
             Error,
         }
 
@@ -66,7 +66,7 @@ namespace VoidScribe.MtgDuelDecks
                     StartAsync(HandleCastingAsync, nameof(HandleCastingAsync));
                     break;
 
-                case State.Casting:
+                case State.CastingSpell:
                     break;
 
                 case State.Setup:
@@ -88,7 +88,7 @@ namespace VoidScribe.MtgDuelDecks
             }
             catch (System.Exception ex)
             {
-                Debug.LogError($"Unhandled exception in {functionName}.");
+                Debug.LogWarning($"Unhandled exception in {functionName}.");
                 Debug.LogException(ex);
 
                 SetState(State.Error);
@@ -105,7 +105,7 @@ namespace VoidScribe.MtgDuelDecks
 
                 Card targetCard = await ChooseTargetCardAsync(cardQuery: null);
 
-                SetState(State.Casting);
+                SetState(State.CastingSpell);
 
                 didCastSpell = await TryCastSpellAsync(targetCard);
             }
@@ -189,7 +189,7 @@ namespace VoidScribe.MtgDuelDecks
 
             if (card.CurrentZone == handZone)
             {
-                if (manaManager.TrySpendMana(card.ManaCosts))
+                if (manaManager.TrySpendMana(card.ManaCost))
                 {
                     Debug.Log("Casting spell - " + card.CardName);
                     card.MoveToZone(stackZone);
@@ -224,9 +224,9 @@ namespace VoidScribe.MtgDuelDecks
         }
 
         private readonly AwaitableCompletionSource<Card> targetSelectionCompletionSource = new();
-        private CardColors? currentQuery;
+        private MtgColors? currentQuery;
 
-        public async Awaitable<Card> ChooseTargetCardAsync(CardColors? cardQuery)
+        public async Awaitable<Card> ChooseTargetCardAsync(MtgColors? cardQuery)
         {
             Debug.Log($"Choosing target card - {(cardQuery?.ToString() ?? "No Query")}");
 

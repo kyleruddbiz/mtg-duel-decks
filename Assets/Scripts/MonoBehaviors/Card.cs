@@ -19,27 +19,24 @@ namespace VoidScribe.MtgDuelDecks
 
         public string CardName => cardData.CardName;
 
-        // TODO - I wonder if these are just used for query. If so, is it worth internalizing the query logic in card?
         public CardTypes CardTypes => cardData.CardTypes;
         public CardSuperTypes CardSuperTypes => cardData.CardSuperTypes;
         public CardSubType[] CardSubTypes => cardData.CardSubTypes;
-        public ManaCost[] ManaCosts => cardData.ManaCosts;
+        public ManaCost ManaCost => cardData.ManaCost;
         public CardTraits CardTraits { get; private set; }
 
         public bool IsPermanent => cardData.CardTypes.IsPermanent();
 
-        public CardColors Colors
+        public MtgColors Colors
         {
             get
             {
                 if (CardTraits.HasFlag(CardTraits.Devoid))
                 {
-                    return CardColors.Colorless;
+                    return MtgColors.Colorless;
                 }
 
-                return ManaCosts
-                    .Select(manaCost => manaCost.Color)
-                    .ToCardColors();
+                return cardData.ManaCost.ToCardColors();
             }
         }
 

@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Linq;
 
 namespace VoidScribe.MtgDuelDecks
 {
@@ -19,11 +21,30 @@ namespace VoidScribe.MtgDuelDecks
 
             return (T)Enum.ToObject(typeof(T), result);
         }
+
+        /// <summary>
+        /// "Everything" is a special flag set in the inspector. It sets all the bits to 1 (which is -1 as an int).
+        ///
+        /// Since this includes bits outside the valid range, we need to convert it to <see cref="FlagsEnumUtility{T}.All"/> for an accurate count.
+        /// </summary>
+        public static int GetActiveFlagsCount<T>(T value, bool shouldConvertEverythingFlagToAll = true) where T : Enum, IConvertible
+        {
+            int valueAsInt = ((IConvertible)value).ToInt32(null);
+
+            if (shouldConvertEverythingFlagToAll && valueAsInt == -1)
+            {
+                valueAsInt = FlagsEnumUtility<T>.AllAsInt;
+            }
+
+            return new BitArray(new[] { valueAsInt })
+                .OfType<bool>()
+                .Count(x => x);
+        }
     }
 
     public static class FlagsEnumUtility<T> where T : Enum, IConvertible
     {
-        // Using a bool since I can't determine if T is nullable or not.
+        // Using a bool since the compiler can't determine if T is nullable or not.
         private static bool isEnumInitialized = false;
         private static T all;
 

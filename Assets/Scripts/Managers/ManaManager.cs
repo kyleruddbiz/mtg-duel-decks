@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
@@ -6,14 +8,14 @@ namespace VoidScribe.MtgDuelDecks
     [CreateAssetMenu(fileName = "ManaManager", menuName = "VoidScribe/Managers/ManaManager")]
     public class ManaManager : ScriptableObject
     {
-        protected readonly Dictionary<ManaColor, int> availableMana = new();
+        protected readonly Dictionary<MtgColor, int> availableMana = new();
 
-        public int GetAvailableMana(ManaColor color)
+        public int GetAvailableMana(MtgColor color)
         {
             return availableMana.TryGetValue(color, out int amount) ? amount : 0;
         }
 
-        public void AddMana(ManaColor color, int amount)
+        public void AddMana(MtgColor color, int amount)
         {
             if (availableMana.ContainsKey(color))
             {
@@ -25,58 +27,68 @@ namespace VoidScribe.MtgDuelDecks
             }
         }
 
-        // TODO - Need to make this smarter to handle colorless mana
-        public bool TrySpendMana(params ManaCost[] manaCosts)
+        public bool TrySpendMana(ManaCost manaCost)
         {
-            // pull out the generic mana costs
-            // TODO - This is a problem for more brain me.
+            var availableManaCopy = new Dictionary<MtgColor, int>(availableMana);
 
-            int expectedGenericMana = 0;
-
-            foreach (ManaCost manaCost in manaCosts)
+            foreach ((MtgColor color, int costAmount) in manaCost.GetColorCosts())
             {
-                if (manaCost.Color == ManaColor.Generic)
+                if (!availableManaCopy.TryGetValue(color, out int availableAmount))
                 {
-                    if (!HasEnoughMana(ManaColor.Colorless, manaCost.Amount))
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                    // NODO - If needed, support "Any" mana type here.
+                    return false;
                 }
 
-                if (!HasEnoughMana(manaCost))
+                if (availableAmount > costAmount)
                 {
+                    availableManaCopy[color] -= costAmount;
+                }
+                else if (availableAmount == costAmount)
+                {
+                    availableManaCopy.Remove(color);
+                }
+                else
+                {
+                    // NODO - If needed, support "Any" mana type here.
                     return false;
                 }
             }
 
-            foreach (ManaCost manaCost in manaCosts)
-            {
-                var color = manaCost.Color;
+            int genericCostAmount = manaCost.AmountGeneric;
 
-                if (color == ManaColor.Generic)
+            foreach ((MtgColor color, int availableAmount) in availableManaCopy.ToList())
+            {
+                if (genericCostAmount == 0)
                 {
-                    color = ManaColor.Colorless;
+                    break;
                 }
 
-                availableMana[color] -= manaCost.Amount;
+                if (availableAmount > 0)
+                {
+                    int amountToSpend = System.Math.Min(availableAmount, genericCostAmount);
+
+                    if (availableAmount > amountToSpend)
+                    {
+                        availableManaCopy[color] -= amountToSpend;
+                    }
+                    else if (availableAmount == amountToSpend)
+                    {
+                        availableManaCopy.Remove(color);
+                    }
+
+                    genericCostAmount -= amountToSpend;
+                }
             }
 
+            if (genericCostAmount > 0)
+            {
+                return false;
+            }
+
+            availableMana.Clear();
+            availableMana.AddRange(availableManaCopy);
+
             return true;
-        }
-
-        private bool HasEnoughMana(ManaCost manaCost)
-        {
-            return HasEnoughMana(manaCost.Color, manaCost.Amount);
-        }
-
-        private bool HasEnoughMana(ManaColor color, int amount)
-        {
-            return availableMana.TryGetValue(color, out int availableAmount)
-                && availableAmount >= amount;
         }
     }
 }
