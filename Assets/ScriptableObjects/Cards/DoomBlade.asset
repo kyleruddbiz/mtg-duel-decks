@@ -31,6 +31,6 @@ MonoBehaviour:
     <IsWip>k__BackingField: 0
     <Action>k__BackingField: {fileID: 11400000, guid: 1f7c341123c3f6f41b05f948343680d4, type: 2}
     query:
-      <ActiveParameters>k__BackingField: 0
+      <ActiveParameters>k__BackingField: 1
       <Colors>k__BackingField: 27
       <CardTypes>k__BackingField: 0
