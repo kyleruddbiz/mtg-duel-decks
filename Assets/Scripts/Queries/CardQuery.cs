@@ -4,47 +4,74 @@ using UnityEngine;
 namespace VoidScribe.MtgDuelDecks
 {
     [Serializable]
-    public class CardQuery : ParameterBasedQuery<Card>
+    public class CardQuery
     {
-        protected override bool IsNegated { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        [SerializeField] private CardTypeQueryParameter cardTypes;
-        [SerializeField] private CardSuperTypeQueryParameter superTypes;
-        [SerializeField] private CardSubTypeQueryParameter[] subTypes;
-        [SerializeField] private CardColorQueryParameter[] colors;
-
-        protected override bool IsMatchInternal(Card source)
+        [Flags]
+        public enum Parameters
         {
-            throw new NotImplementedException();
+            None = 0,
+            Color = 1,
+            CardType = 2,
+        }
 
-            //if (isPermanent)
-            //{
-            //    if (!source.IsPermanent)
-            //    {
-            //        return false;
-            //    }
-            //}
-            //else if (source.CardType != cardType)
-            //{
-            //    return false;
-            //}
+        public static CardQuery Empty => new()
+        {
+            ActiveParameters = Parameters.None,
+            Colors = MtgColors.Colorless,
+            CardTypes = CardTypes.None,
+        };
 
-            //if (superTypes.Length != 0 && !source.CardSuperTypes.ContainsAll(superTypes))
-            //{
-            //    return false;
-            //}
+        [field: SerializeField] private Parameters ActiveParameters { get; set; }
+        [field: SerializeField] private MtgColors Colors { get; set; }
+        [field: SerializeField] private CardTypes CardTypes { get; set; }
 
-            //if (subTypes.Length != 0 && !source.CardSubTypes.ContainsAll(subTypes))
-            //{
-            //    return false;
-            //}
+        public override string ToString()
+        {
+            if (ActiveParameters == Parameters.None)
+            {
+                return "No Query";
+            }
 
-            //if (colors.Length != 0 && !source.Colors.ContainsAll(colors))
-            //{
-            //    return false;
-            //}
+            return $"Query({ActiveParameters}): {Colors}, {CardTypes}";
+        }
 
-            //return true;
+        public bool IsMatch(Card card)
+        {
+            if (card == null)
+            {
+                throw new ArgumentNullException(nameof(card));
+            }
+
+            if (!IsColorMatch(card.Colors))
+            {
+                return false;
+            }
+            if (!IsCardTypeMatch(card.CardTypes))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool IsColorMatch(MtgColors colors)
+        {
+            if (!ActiveParameters.HasFlag(Parameters.Color))
+            {
+                return true;
+            }
+
+            return Colors.HasFlag(colors);
+        }
+
+        private bool IsCardTypeMatch(CardTypes cardTypes)
+        {
+            if (!ActiveParameters.HasFlag(Parameters.CardType))
+            {
+                return true;
+            }
+
+            return CardTypes.HasFlag(cardTypes);
         }
     }
 }

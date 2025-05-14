@@ -4,7 +4,7 @@ namespace VoidScribe.MtgDuelDecks
     {
         public class Context
         {
-            public MtgColors Query { get; set; }
+            public CardQuery Query { get; set; }
         }
     }
 }

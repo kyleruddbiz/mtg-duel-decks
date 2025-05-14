@@ -30,4 +30,7 @@ MonoBehaviour:
   <SpellAbility>k__BackingField:
     <IsWip>k__BackingField: 0
     <Action>k__BackingField: {fileID: 11400000, guid: 1f7c341123c3f6f41b05f948343680d4, type: 2}
-    query: 27
+    query:
+      <ActiveParameters>k__BackingField: 0
+      <Colors>k__BackingField: 27
+      <CardTypes>k__BackingField: 0

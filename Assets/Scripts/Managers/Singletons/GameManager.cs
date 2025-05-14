@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
@@ -103,7 +102,7 @@ namespace VoidScribe.MtgDuelDecks
             {
                 SetState(State.WaitingForInput);
 
-                Card targetCard = await ChooseTargetCardAsync(cardQuery: null);
+                Card targetCard = await ChooseTargetCardAsync();
 
                 SetState(State.CastingSpell);
 
@@ -238,20 +237,20 @@ namespace VoidScribe.MtgDuelDecks
         }
 
         private readonly AwaitableCompletionSource<Card> targetSelectionCompletionSource = new();
-        private MtgColors? currentQuery;
+        private CardQuery currentQuery;
 
-        public async Awaitable<Card> ChooseTargetCardAsync(MtgColors? cardQuery)
+        public async Awaitable<Card> ChooseTargetCardAsync(CardQuery cardQuery = null)
         {
-            Debug.Log($"Choosing target card - {(cardQuery?.ToString() ?? "No Query")}");
+            currentQuery = cardQuery ?? CardQuery.Empty;
 
-            currentQuery = cardQuery;
+            Debug.Log(currentQuery?.ToString());
 
             return await targetSelectionCompletionSource.AwaitAndReset();
         }
 
         public bool TrySetAsTarget(Card card)
         {
-            if (!currentQuery.HasValue || currentQuery.Value.HasFlag(card.Colors))
+            if (currentQuery.IsMatch(card))
             {
                 Debug.Log($"Setting target card - {card.CardName}");
 

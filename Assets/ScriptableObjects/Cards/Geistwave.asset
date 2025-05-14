@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d835bbc2e2c4b4292a25bacacd3b3d, type: 3}
   m_Name: Geistwave
   m_EditorClassIdentifier: 
-  <IsWip>k__BackingField: 1
+  <IsWip>k__BackingField: 0
   <CardName>k__BackingField: Geistwave
   <CardImages>k__BackingField: {fileID: 11400000, guid: bf662587c9fecf448ba2e4d4fc2ba087, type: 2}
   <ManaCost>k__BackingField:
@@ -30,4 +30,7 @@ MonoBehaviour:
   <SpellAbility>k__BackingField:
     <IsWip>k__BackingField: 1
     <Action>k__BackingField: {fileID: 11400000, guid: 5cfe07bc6204e3042a5ea333918b45f0, type: 2}
-    query: -1
+    query:
+      <ActiveParameters>k__BackingField: 2
+      <Colors>k__BackingField: 0
+      <CardTypes>k__BackingField: 188
