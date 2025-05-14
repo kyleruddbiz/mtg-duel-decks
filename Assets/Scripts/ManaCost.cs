@@ -21,7 +21,7 @@ namespace VoidScribe.MtgDuelDecks
                     MtgCostColors.Black => nameof(amountBlack),
                     MtgCostColors.Red => nameof(amountRed),
                     MtgCostColors.Green => nameof(amountGreen),
-                    _ => throw new ArgumentOutOfRangeException(color.ToString())
+                    _ => throw new ArgumentOutOfRangeException(nameof(color), color, null)
                 };
             }
         }

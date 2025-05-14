@@ -32,7 +32,7 @@
 //                    CommandParameter.Type.Int => property.FindPropertyRelative(CommandParameter.Properties.IntValue),
 //                    CommandParameter.Type.Float => property.FindPropertyRelative(CommandParameter.Properties.FloatValue),
 //                    CommandParameter.Type.Bool => property.FindPropertyRelative(CommandParameter.Properties.BoolValue),
-//                    _ => throw new System.ArgumentOutOfRangeException(type.ToString()),
+//                    _ => throw new System.ArgumentOutOfRangeException(nameof(type), type, null),
 //                };
 //                EditorGUI.PropertyField(position, valueProperty);
 

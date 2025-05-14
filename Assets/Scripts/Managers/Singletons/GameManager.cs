@@ -144,12 +144,26 @@ namespace VoidScribe.MtgDuelDecks
             libraryZone.Cards.First(x => x.CardName == "Dogged Detective")
                 .MoveToZone(battlefieldZone);
 
-            yield return new WaitForSeconds(.25f);
+            int maxCards = System.Math.Min(libraryZone.Cards.Count, 5);
 
-            libraryZone.Cards.First(x => x.CardName == "Doom Blade")
-                .MoveToZone(handZone);
+            for (int i = 0; i < maxCards; i++)
+            {
+                yield return new WaitForSeconds(.25f);
+                Move();
+            }
+
+            yield return new WaitForSeconds(.5f);
 
             SetState(State.ReadyToCast);
+
+            void Move()
+            {
+                Card card = libraryZone.Cards[0];
+
+                Debug.Log($"Moving {card} to hand zone");
+
+                card.MoveToZone(handZone);
+            }
         }
 
         private void InitializeDeck(Player controllingPlayer)

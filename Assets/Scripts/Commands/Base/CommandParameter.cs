@@ -40,7 +40,7 @@
 //                    Type.Int => intValue,
 //                    Type.Float => floatValue,
 //                    Type.Bool => boolValue,
-//                    _ => throw new ArgumentOutOfRangeException(type.ToString()),
+//                    _ => throw new ArgumentOutOfRangeException(nameof(type), type, null),
 //                };
 //            }
 //        }
