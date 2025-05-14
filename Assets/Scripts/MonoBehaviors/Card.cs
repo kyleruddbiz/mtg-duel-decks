@@ -117,13 +117,13 @@ namespace VoidScribe.MtgDuelDecks
                 return true;
             }
 
-            //foreach (Command command in Commands)
-            //{
-            //    if (command.IsWip)
-            //    {
-            //        return true;
-            //    }
-            //}
+            if (cardData is SpellCardData spellCardData)
+            {
+                if (spellCardData.SpellAbility.IsWip)
+                {
+                    return true;
+                }
+            }
 
             return false;
         }

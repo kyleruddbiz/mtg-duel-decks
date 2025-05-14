@@ -5,6 +5,8 @@ namespace VoidScribe.MtgDuelDecks
 {
     public abstract class SpellAbility<TAction> where TAction : AbilityAction
     {
+        [field: SerializeField] public bool IsWip { get; private set; } = true;
+
         protected abstract TAction Action { get; set; }
 
         public async Awaitable ExecuteAsync()

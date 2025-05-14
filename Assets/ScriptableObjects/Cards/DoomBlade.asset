@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DoomBlade
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 0
-  <CardImages>k__BackingField: {fileID: 11400000, guid: bdb207a835d630c46b35e99b5a7225ab, type: 2}
   <CardName>k__BackingField: Doom Blade
+  <CardImages>k__BackingField: {fileID: 11400000, guid: bdb207a835d630c46b35e99b5a7225ab, type: 2}
   <ManaCost>k__BackingField:
     colors: 36
     <AmountGeneric>k__BackingField: 1
@@ -28,5 +28,6 @@ MonoBehaviour:
   <CardSubTypes>k__BackingField: []
   <CardTraits>k__BackingField: 0
   <SpellAbility>k__BackingField:
+    <IsWip>k__BackingField: 0
     <Action>k__BackingField: {fileID: 11400000, guid: 1f7c341123c3f6f41b05f948343680d4, type: 2}
     query: 27
