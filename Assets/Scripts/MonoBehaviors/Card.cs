@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using UnityEngine;
 
@@ -26,30 +27,21 @@ namespace VoidScribe.MtgDuelDecks
         public CardSubType[] CardSubTypes => cardData.CardSubTypes;
         public ManaCost[] ManaCosts => cardData.ManaCosts;
         public CardTraits CardTraits { get; private set; }
-        //public Command[] Commands => cardData.Commands;
 
         public bool IsPermanent => cardData.CardTypes.IsPermanent();
 
-        public IEnumerable<Color> Colors
+        public CardColors Colors
         {
             get
             {
                 if (CardTraits.HasFlag(CardTraits.Devoid))
                 {
-                    return new[] { Color.Colorless };
+                    return CardColors.Colorless;
                 }
 
-                IEnumerable<Color> colors = ManaCosts
-                   .Select(manaCost => manaCost.Color)
-                   .Where(color => color != Color.Colorless)
-                   .Distinct();
-
-                if (!colors.Any())
-                {
-                    return new[] { Color.Colorless };
-                }
-
-                return colors;
+                return ManaCosts
+                    .Select(manaCost => manaCost.Color)
+                    .ToCardColors();
             }
         }
 
@@ -63,20 +55,8 @@ namespace VoidScribe.MtgDuelDecks
             CardTraits = cardData.CardTraits;
         }
 
-        private void OnMouseOver()
-        {
-            //Debug.Log("Mouse over - " + ToString());
-        }
-
-        private void OnMouseDown()
-        {
-            //Debug.Log("Mouse down - " + ToString());
-        }
-
         private void OnMouseUp()
         {
-            // TODO - Just for testing right now.
-
             GameManager.Instance.TrySetAsTarget(this);
         }
 
@@ -120,14 +100,6 @@ namespace VoidScribe.MtgDuelDecks
         {
             await cardData.SpellAbility.ExecuteAsync();
         }
-
-        //public async Awaitable ExecuteCommandsAsync()
-        //{
-        //    foreach (Command command in Commands)
-        //    {
-        //        await command.ExecuteAsync(this);
-        //    }
-        //}
 
         public override string ToString()
         {

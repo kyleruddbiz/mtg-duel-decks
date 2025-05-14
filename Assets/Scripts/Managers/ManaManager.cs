@@ -6,14 +6,14 @@ namespace VoidScribe.MtgDuelDecks
     [CreateAssetMenu(fileName = "ManaManager", menuName = "VoidScribe/Managers/ManaManager")]
     public class ManaManager : ScriptableObject
     {
-        protected readonly Dictionary<Color, int> availableMana = new();
+        protected readonly Dictionary<ManaColor, int> availableMana = new();
 
-        public int GetAvailableMana(Color color)
+        public int GetAvailableMana(ManaColor color)
         {
             return availableMana.TryGetValue(color, out int amount) ? amount : 0;
         }
 
-        public void AddMana(Color color, int amount)
+        public void AddMana(ManaColor color, int amount)
         {
             if (availableMana.ContainsKey(color))
             {
@@ -28,8 +28,25 @@ namespace VoidScribe.MtgDuelDecks
         // TODO - Need to make this smarter to handle colorless mana
         public bool TrySpendMana(params ManaCost[] manaCosts)
         {
+            // pull out the generic mana costs
+            // TODO - This is a problem for more brain me.
+
+            int expectedGenericMana = 0;
+
             foreach (ManaCost manaCost in manaCosts)
             {
+                if (manaCost.Color == ManaColor.Generic)
+                {
+                    if (!HasEnoughMana(ManaColor.Colorless, manaCost.Amount))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+
                 if (!HasEnoughMana(manaCost))
                 {
                     return false;
@@ -38,7 +55,14 @@ namespace VoidScribe.MtgDuelDecks
 
             foreach (ManaCost manaCost in manaCosts)
             {
-                availableMana[manaCost.Color] -= manaCost.Amount;
+                var color = manaCost.Color;
+
+                if (color == ManaColor.Generic)
+                {
+                    color = ManaColor.Colorless;
+                }
+
+                availableMana[color] -= manaCost.Amount;
             }
 
             return true;
@@ -49,7 +73,7 @@ namespace VoidScribe.MtgDuelDecks
             return HasEnoughMana(manaCost.Color, manaCost.Amount);
         }
 
-        private bool HasEnoughMana(Color color, int amount)
+        private bool HasEnoughMana(ManaColor color, int amount)
         {
             return availableMana.TryGetValue(color, out int availableAmount)
                 && availableAmount >= amount;

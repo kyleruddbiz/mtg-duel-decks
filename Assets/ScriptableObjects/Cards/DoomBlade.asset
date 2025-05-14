@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: -8224220048330781870, guid: 5b6fbc13be7240b469cf38ddad6d2dad, type: 3}
   <CardName>k__BackingField: Doom Blade
   <ManaCosts>k__BackingField:
-  - <Color>k__BackingField: 0
+  - <Color>k__BackingField: 6
     <Amount>k__BackingField: 1
   - <Color>k__BackingField: 3
     <Amount>k__BackingField: 1
@@ -30,4 +30,4 @@ MonoBehaviour:
   <CardTraits>k__BackingField: 0
   <SpellAbility>k__BackingField:
     <Action>k__BackingField: {fileID: 11400000, guid: 1f7c341123c3f6f41b05f948343680d4, type: 2}
-    query: 0000000001000000020000000400000005000000
+    query: 27

@@ -193,32 +193,28 @@ namespace VoidScribe.MtgDuelDecks
         }
 
         private readonly AwaitableCompletionSource<Card> targetSelectionCompletionSource = new();
-        private Color[] currentQuery;
+        private CardColors? currentQuery;
 
-        public async Awaitable<Card> ChooseTargetCardAsync(Color[] cardQuery)
+        public async Awaitable<Card> ChooseTargetCardAsync(CardColors? cardQuery)
         {
-            currentQuery = cardQuery ?? System.Array.Empty<Color>();
+            Debug.Log($"Choosing target card - {cardQuery}");
+
+            currentQuery = cardQuery;
 
             return await targetSelectionCompletionSource.ResetAndReturnAwaitable();
         }
 
         public bool TrySetAsTarget(Card card)
         {
-            if (currentQuery == null || currentQuery.Length == 0)
+            if (!currentQuery.HasValue || currentQuery.Value.HasFlag(card.Colors))
             {
+                Debug.Log($"Setting target card - {card.CardName}");
+
                 targetSelectionCompletionSource.SetResult(card);
                 return true;
             }
 
-            foreach (Color color in currentQuery)
-            {
-                if (card.Colors.Contains(color))
-                {
-                    targetSelectionCompletionSource.SetResult(card);
-
-                    return true;
-                }
-            }
+            Debug.Log($"Can't set target aard. Card does not match query - {card.CardName} - {currentQuery}");
 
             return false;
         }

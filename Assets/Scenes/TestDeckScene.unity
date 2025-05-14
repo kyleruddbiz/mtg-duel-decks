@@ -178,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: manaManager
       value: 
-      objectReference: {fileID: 11400000, guid: 8a4d70918a90f9e4ba9c6c49e703977f, type: 2}
+      objectReference: {fileID: 11400000, guid: fb6557dc6b0d99d4bb701d81b37cdf42, type: 2}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: symbolSprite
       value: 
@@ -656,7 +656,7 @@ PrefabInstance:
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: manaManager
       value: 
-      objectReference: {fileID: 11400000, guid: 8a4d70918a90f9e4ba9c6c49e703977f, type: 2}
+      objectReference: {fileID: 11400000, guid: fb6557dc6b0d99d4bb701d81b37cdf42, type: 2}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: symbolSprite
       value: 
@@ -989,7 +989,7 @@ PrefabInstance:
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: manaManager
       value: 
-      objectReference: {fileID: 11400000, guid: 8a4d70918a90f9e4ba9c6c49e703977f, type: 2}
+      objectReference: {fileID: 11400000, guid: fb6557dc6b0d99d4bb701d81b37cdf42, type: 2}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: symbolSprite
       value: 
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 8212766563191543443, guid: 6a90ac5e2871d7a4c9bd8f8bd93e2a59, type: 3}
   player1: {fileID: 11400000, guid: 2246a82834616ee49b17794af79cfe00, type: 2}
-  manaManager: {fileID: 11400000, guid: 8a4d70918a90f9e4ba9c6c49e703977f, type: 2}
+  manaManager: {fileID: 11400000, guid: fb6557dc6b0d99d4bb701d81b37cdf42, type: 2}
   libraryZone: {fileID: 11400000, guid: bcb35c83eb54a5944ae4f8f594278cdc, type: 2}
   graveyardZone: {fileID: 11400000, guid: a3773428ebead4449a7dd1959a911f05, type: 2}
   exileZone: {fileID: 11400000, guid: de989f0683b637c42a86b2bb5a619c6a, type: 2}
@@ -1156,7 +1156,7 @@ PrefabInstance:
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: manaManager
       value: 
-      objectReference: {fileID: 11400000, guid: 8a4d70918a90f9e4ba9c6c49e703977f, type: 2}
+      objectReference: {fileID: 11400000, guid: fb6557dc6b0d99d4bb701d81b37cdf42, type: 2}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: symbolSprite
       value: 
@@ -1233,7 +1233,7 @@ PrefabInstance:
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: manaManager
       value: 
-      objectReference: {fileID: 11400000, guid: 8a4d70918a90f9e4ba9c6c49e703977f, type: 2}
+      objectReference: {fileID: 11400000, guid: fb6557dc6b0d99d4bb701d81b37cdf42, type: 2}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: symbolSprite
       value: 
@@ -1410,7 +1410,7 @@ PrefabInstance:
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: manaManager
       value: 
-      objectReference: {fileID: 11400000, guid: 8a4d70918a90f9e4ba9c6c49e703977f, type: 2}
+      objectReference: {fileID: 11400000, guid: fb6557dc6b0d99d4bb701d81b37cdf42, type: 2}
     - target: {fileID: 7761070871895993163, guid: 6f93ef7ddadc2384299533ff01332330, type: 3}
       propertyPath: symbolSprite
       value: 
