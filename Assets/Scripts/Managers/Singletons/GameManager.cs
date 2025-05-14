@@ -228,6 +228,12 @@ namespace VoidScribe.MtgDuelDecks
                     Debug.Log($"Not enough mana to cast {card}.");
                 }
             }
+            else if (card.CurrentZone == graveyardZone || card.CurrentZone == libraryZone)
+            {
+                Debug.Log("Sending to hand - " + card.CardName);
+
+                card.MoveToZone(handZone);
+            }
             else
             {
                 Debug.Log($"Card is not in hand - {card.CardName}");
