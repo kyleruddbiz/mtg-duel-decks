@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
@@ -16,6 +17,7 @@ namespace VoidScribe.MtgDuelDecks
             WaitingForInput,
             ReadyToCast,
             Casting,
+            Error,
         }
 
         public static GameManager Instance { get; private set; }
@@ -61,7 +63,7 @@ namespace VoidScribe.MtgDuelDecks
             switch (state)
             {
                 case State.ReadyToCast:
-                    _ = HandleCastingAsync();
+                    StartAsync(HandleCastingAsync, nameof(HandleCastingAsync));
                     break;
 
                 case State.Casting:
@@ -72,6 +74,24 @@ namespace VoidScribe.MtgDuelDecks
 
                 case State.WaitingForInput:
                     break;
+
+                case State.Error:
+                    break;
+            }
+        }
+
+        private async void StartAsync(System.Func<Awaitable> function, string functionName)
+        {
+            try
+            {
+                await function();
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"Unhandled exception in {functionName}.");
+                Debug.LogException(ex);
+
+                SetState(State.Error);
             }
         }
 
@@ -96,7 +116,16 @@ namespace VoidScribe.MtgDuelDecks
 
         private void SetState(State state)
         {
-            Debug.Log($"{this.state} -> {state}");
+            string message = $"{this.state} -> {state}";
+
+            if (state == State.Error)
+            {
+                Debug.LogError(message);
+            }
+            else
+            {
+                Debug.Log(message);
+            }
 
             this.state = state;
         }
@@ -178,6 +207,8 @@ namespace VoidScribe.MtgDuelDecks
                     {
                         card.MoveToZone(graveyardZone);
                     }
+
+                    return true;
                 }
                 else
                 {
@@ -197,11 +228,11 @@ namespace VoidScribe.MtgDuelDecks
 
         public async Awaitable<Card> ChooseTargetCardAsync(CardColors? cardQuery)
         {
-            Debug.Log($"Choosing target card - {cardQuery}");
+            Debug.Log($"Choosing target card - {(cardQuery?.ToString() ?? "No Query")}");
 
             currentQuery = cardQuery;
 
-            return await targetSelectionCompletionSource.ResetAndReturnAwaitable();
+            return await targetSelectionCompletionSource.AwaitAndReset();
         }
 
         public bool TrySetAsTarget(Card card)
@@ -211,10 +242,11 @@ namespace VoidScribe.MtgDuelDecks
                 Debug.Log($"Setting target card - {card.CardName}");
 
                 targetSelectionCompletionSource.SetResult(card);
+
                 return true;
             }
 
-            Debug.Log($"Can't set target aard. Card does not match query - {card.CardName} - {currentQuery}");
+            Debug.Log($"Can't set target card. Card does not match query - {card.CardName} - {currentQuery}");
 
             return false;
         }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
@@ -6,6 +7,16 @@ namespace VoidScribe.MtgDuelDecks
     {
         protected abstract TAction Action { get; set; }
 
-        public abstract Awaitable ExecuteAsync();
+        public async Awaitable ExecuteAsync()
+        {
+            if (Action == null)
+            {
+                throw new ArgumentNullException(nameof(Action));
+            }
+
+            await ExecuteInternalAsync();
+        }
+
+        protected abstract Awaitable ExecuteInternalAsync();
     }
 }

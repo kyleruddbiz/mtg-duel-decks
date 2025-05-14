@@ -9,7 +9,7 @@ namespace VoidScribe.MtgDuelDecks
         [field: SerializeField] protected override SingleTargetAbilityAction Action { get; set; }
         [SerializeField] private CardColors query;
 
-        public override async Awaitable ExecuteAsync()
+        protected override async Awaitable ExecuteInternalAsync()
         {
             await Action.ExecuteInternalAsync(new SingleTargetAbilityAction.Context { Query = query });
         }

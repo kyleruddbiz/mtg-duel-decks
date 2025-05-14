@@ -1,22 +1,36 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace VoidScribe.MtgDuelDecks
 {
-    // https://discussions.unity.com/t/awaitable-equivalent-of-task-completedtask/1546128/4
     public static class AwaitableCompletionSourceExtensions
     {
-        public static Awaitable ResetAndReturnAwaitable(this AwaitableCompletionSource source)
+        public static async Awaitable AwaitAndReset(this AwaitableCompletionSource source)
         {
-            source.Reset();
-
-            return source.Awaitable;
+            try
+            {
+                await source.Awaitable;
+            }
+            finally
+            {
+                source.Reset();
+            }
         }
 
-        public static Awaitable<T> ResetAndReturnAwaitable<T>(this AwaitableCompletionSource<T> source)
+        public static async Awaitable<T> AwaitAndReset<T>(this AwaitableCompletionSource<T> source)
         {
-            source.Reset();
+            T value = default;
 
-            return source.Awaitable;
+            try
+            {
+                value = await source.Awaitable;
+            }
+            finally
+            {
+                source.Reset();
+            }
+
+            return value;
         }
     }
 }

@@ -98,6 +98,8 @@ namespace VoidScribe.MtgDuelDecks
 
         public async Awaitable ExecuteSpellAbilityAsync()
         {
+            Debug.Log($"Executing spell ability for {cardData.name} - {cardData.SpellAbility}");
+
             await cardData.SpellAbility.ExecuteAsync();
         }
 
