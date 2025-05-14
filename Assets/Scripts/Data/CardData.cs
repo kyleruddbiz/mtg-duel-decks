@@ -4,11 +4,11 @@ namespace VoidScribe.MtgDuelDecks
 {
     public abstract class CardData : ScriptableObject
     {
-        // Internal
+        [field: Header(HeaderConstants.Internal)]
         [field: SerializeField] public bool IsWip { get; private set; } = true;
         [field: SerializeField] public Sprite[] CardImages { get; private set; }
 
-        // Fields
+        [field: Header(HeaderConstants.Fields)]
         [field: SerializeField] public string CardName { get; private set; }
 
         [field: Tooltip("Use Colorless to represent generic mana costs.")]
