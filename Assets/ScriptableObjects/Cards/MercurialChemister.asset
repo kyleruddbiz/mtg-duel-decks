@@ -13,19 +13,21 @@ MonoBehaviour:
   m_Name: MercurialChemister
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
-  <CardName>k__BackingField: 
-  <CardImages>k__BackingField: {fileID: 0}
+  <CardName>k__BackingField: Mercurial Chemister
+  <CardImages>k__BackingField: {fileID: 11400000, guid: 5e779241732b92b49b47fe42cb3d85db, type: 2}
   <ManaCost>k__BackingField:
-    colors: 0
-    <AmountGeneric>k__BackingField: 0
+    colors: 42
+    <AmountGeneric>k__BackingField: 3
     amountWhite: 0
-    amountBlue: 0
+    amountBlue: 1
     amountBlack: 0
-    amountRed: 0
+    amountRed: 1
     amountGreen: 0
-  cardTypes: 0
+  cardTypes: 4
   <CardSuperTypes>k__BackingField: 0
-  <CardSubTypes>k__BackingField: []
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: cdc79f991907c70458e32b03609de4c2, type: 2}
+  - {fileID: 11400000, guid: 1f3e63b6a9535ff498718d8a1986b309, type: 2}
   <CardTraits>k__BackingField: 0
-  <Power>k__BackingField: 0
-  <Toughness>k__BackingField: 0
+  <Power>k__BackingField: 2
+  <Toughness>k__BackingField: 3

@@ -13,19 +13,21 @@ MonoBehaviour:
   m_Name: DragonlordDromoka
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
-  <CardName>k__BackingField: 
-  <CardImages>k__BackingField: {fileID: 0}
+  <CardName>k__BackingField: Dragonlord Dromoka
+  <CardImages>k__BackingField: {fileID: 11400000, guid: 6cb7be86c9f2c5448a5ae8a240eb0152, type: 2}
   <ManaCost>k__BackingField:
-    colors: 0
-    <AmountGeneric>k__BackingField: 0
-    amountWhite: 0
+    colors: 49
+    <AmountGeneric>k__BackingField: 4
+    amountWhite: 1
     amountBlue: 0
     amountBlack: 0
     amountRed: 0
-    amountGreen: 0
-  cardTypes: 0
-  <CardSuperTypes>k__BackingField: 0
-  <CardSubTypes>k__BackingField: []
-  <CardTraits>k__BackingField: 0
-  <Power>k__BackingField: 0
-  <Toughness>k__BackingField: 0
+    amountGreen: 1
+  cardTypes: 4
+  <CardSuperTypes>k__BackingField: 2
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: ea445ab1174f69446a1bbbe8f53cf9f4, type: 2}
+  - {fileID: 11400000, guid: 45cd78622b8494e4ca9e125dcfca2a13, type: 2}
+  <CardTraits>k__BackingField: 4113
+  <Power>k__BackingField: 5
+  <Toughness>k__BackingField: 7

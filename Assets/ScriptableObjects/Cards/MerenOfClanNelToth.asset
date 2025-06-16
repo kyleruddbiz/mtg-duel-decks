@@ -13,19 +13,21 @@ MonoBehaviour:
   m_Name: MerenOfClanNelToth
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
-  <CardName>k__BackingField: 
-  <CardImages>k__BackingField: {fileID: 0}
+  <CardName>k__BackingField: Meren of Clan Nel Toth
+  <CardImages>k__BackingField: {fileID: 11400000, guid: bf66d84c06c3c3f469f089587f7826c5, type: 2}
   <ManaCost>k__BackingField:
-    colors: 0
-    <AmountGeneric>k__BackingField: 0
+    colors: 52
+    <AmountGeneric>k__BackingField: 2
     amountWhite: 0
     amountBlue: 0
-    amountBlack: 0
+    amountBlack: 1
     amountRed: 0
-    amountGreen: 0
-  cardTypes: 0
-  <CardSuperTypes>k__BackingField: 0
-  <CardSubTypes>k__BackingField: []
+    amountGreen: 1
+  cardTypes: 4
+  <CardSuperTypes>k__BackingField: 2
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: cdc79f991907c70458e32b03609de4c2, type: 2}
+  - {fileID: 11400000, guid: 75d62074847fb334b827a4577df2617f, type: 2}
   <CardTraits>k__BackingField: 0
-  <Power>k__BackingField: 0
-  <Toughness>k__BackingField: 0
+  <Power>k__BackingField: 3
+  <Toughness>k__BackingField: 4

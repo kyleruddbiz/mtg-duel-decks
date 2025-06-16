@@ -13,19 +13,21 @@ MonoBehaviour:
   m_Name: DeeprootWayfinder
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
-  <CardName>k__BackingField: 
-  <CardImages>k__BackingField: {fileID: 0}
+  <CardName>k__BackingField: Deeproot Wayfinder
+  <CardImages>k__BackingField: {fileID: 11400000, guid: 250c610fa9aa97f4abe38e432a23b3c9, type: 2}
   <ManaCost>k__BackingField:
-    colors: 0
-    <AmountGeneric>k__BackingField: 0
+    colors: 48
+    <AmountGeneric>k__BackingField: 1
     amountWhite: 0
     amountBlue: 0
     amountBlack: 0
     amountRed: 0
-    amountGreen: 0
-  cardTypes: 0
+    amountGreen: 1
+  cardTypes: 4
   <CardSuperTypes>k__BackingField: 0
-  <CardSubTypes>k__BackingField: []
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: 1c4ef94a80e0bec419e5b5882e034c19, type: 2}
+  - {fileID: 11400000, guid: b9468f9fe403daf47b08180d514b527a, type: 2}
   <CardTraits>k__BackingField: 0
-  <Power>k__BackingField: 0
-  <Toughness>k__BackingField: 0
+  <Power>k__BackingField: 2
+  <Toughness>k__BackingField: 3

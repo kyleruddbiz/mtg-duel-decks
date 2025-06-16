@@ -13,19 +13,21 @@ MonoBehaviour:
   m_Name: ThrunBreakerOfSilence
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
-  <CardName>k__BackingField: 
-  <CardImages>k__BackingField: {fileID: 0}
+  <CardName>k__BackingField: Thrun, Breaker of Silence
+  <CardImages>k__BackingField: {fileID: 11400000, guid: 081034a25a02eb5438993fce6dbdbd0f, type: 2}
   <ManaCost>k__BackingField:
-    colors: 0
-    <AmountGeneric>k__BackingField: 0
+    colors: 48
+    <AmountGeneric>k__BackingField: 3
     amountWhite: 0
     amountBlue: 0
     amountBlack: 0
     amountRed: 0
-    amountGreen: 0
-  cardTypes: 0
-  <CardSuperTypes>k__BackingField: 0
-  <CardSubTypes>k__BackingField: []
-  <CardTraits>k__BackingField: 0
-  <Power>k__BackingField: 0
-  <Toughness>k__BackingField: 0
+    amountGreen: 2
+  cardTypes: 4
+  <CardSuperTypes>k__BackingField: 2
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: 8be88ed33c532424e8ad460dd58e04c6, type: 2}
+  - {fileID: 11400000, guid: 75d62074847fb334b827a4577df2617f, type: 2}
+  <CardTraits>k__BackingField: 4100
+  <Power>k__BackingField: 5
+  <Toughness>k__BackingField: 5

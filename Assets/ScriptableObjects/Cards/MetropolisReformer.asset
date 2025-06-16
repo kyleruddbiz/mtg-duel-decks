@@ -13,19 +13,21 @@ MonoBehaviour:
   m_Name: MetropolisReformer
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
-  <CardName>k__BackingField: 
-  <CardImages>k__BackingField: {fileID: 0}
+  <CardName>k__BackingField: Metropolis Reformer
+  <CardImages>k__BackingField: {fileID: 11400000, guid: 2cd52baac1048464da5300d254f58a68, type: 2}
   <ManaCost>k__BackingField:
-    colors: 0
-    <AmountGeneric>k__BackingField: 0
-    amountWhite: 0
+    colors: 33
+    <AmountGeneric>k__BackingField: 2
+    amountWhite: 1
     amountBlue: 0
     amountBlack: 0
     amountRed: 0
     amountGreen: 0
-  cardTypes: 0
+  cardTypes: 4
   <CardSuperTypes>k__BackingField: 0
-  <CardSubTypes>k__BackingField: []
-  <CardTraits>k__BackingField: 0
-  <Power>k__BackingField: 0
-  <Toughness>k__BackingField: 0
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: 4e5a0a468b9c7be4c8567b1c1b406897, type: 2}
+  - {fileID: 11400000, guid: d5ade00b744b0f0408a6a52b783bd7ab, type: 2}
+  <CardTraits>k__BackingField: 513
+  <Power>k__BackingField: 2
+  <Toughness>k__BackingField: 3

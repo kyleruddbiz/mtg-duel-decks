@@ -13,19 +13,21 @@ MonoBehaviour:
   m_Name: PriestOfFellRites
   m_EditorClassIdentifier: 
   <IsWip>k__BackingField: 1
-  <CardName>k__BackingField: 
-  <CardImages>k__BackingField: {fileID: 0}
+  <CardName>k__BackingField: Priest of Fell Rites
+  <CardImages>k__BackingField: {fileID: 11400000, guid: 2da31bc65618baf4d84134780051aa84, type: 2}
   <ManaCost>k__BackingField:
-    colors: 0
+    colors: 5
     <AmountGeneric>k__BackingField: 0
-    amountWhite: 0
+    amountWhite: 1
     amountBlue: 0
-    amountBlack: 0
+    amountBlack: 1
     amountRed: 0
     amountGreen: 0
-  cardTypes: 0
+  cardTypes: 4
   <CardSuperTypes>k__BackingField: 0
-  <CardSubTypes>k__BackingField: []
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: cdc79f991907c70458e32b03609de4c2, type: 2}
+  - {fileID: 11400000, guid: 9c4051fbbee32394e99a48a00b5e53dc, type: 2}
   <CardTraits>k__BackingField: 0
-  <Power>k__BackingField: 0
-  <Toughness>k__BackingField: 0
+  <Power>k__BackingField: 2
+  <Toughness>k__BackingField: 2
