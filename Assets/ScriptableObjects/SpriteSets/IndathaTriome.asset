@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b195f58aa328d664b996c04366724724, type: 3}
+  m_Name: IndathaTriome
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 5694735567545960607, guid: e12e07b0ef52ab54792fa87dd4239f44, type: 3}
+  - {fileID: -7737164475906088584, guid: f863a1ea6b4ba8843a6bc405f7888cd9, type: 3}
+  - {fileID: -8905259724719281956, guid: a69e6d0a72426dd4f9d711cb847f7a38, type: 3}
+  - {fileID: -4112960777661662412, guid: 28e2804582d269c42bbf79f3463d6bd8, type: 3}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b195f58aa328d664b996c04366724724, type: 3}
+  m_Name: SarythTheVipersFang
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1932196559305158125, guid: 495c37a418f60614e8e231aab232058e, type: 3}
+  - {fileID: -9167018290665955263, guid: b2ba4fb7ce3e39f4ba132830813333fe, type: 3}
+  - {fileID: 101579802038879092, guid: a3d06217d1b85b942be3cf66a01a2dfc, type: 3}

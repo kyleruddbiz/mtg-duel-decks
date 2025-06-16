@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b195f58aa328d664b996c04366724724, type: 3}
+  m_Name: Swamp
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 4653403804934557988, guid: 9f65c9d8ba8a67142b9e67ea1b4cd850, type: 3}
+  - {fileID: -5123367600936868949, guid: 70c62f3c3187e9f49bd53f059523c70b, type: 3}
+  - {fileID: 8690087192489240616, guid: 5bca0ea3bd78ac7439ad2a5cac8e08cd, type: 3}
+  - {fileID: 8217911801531126743, guid: ea537b16357c467449db9f766dbf920f, type: 3}
+  - {fileID: -669035526909705475, guid: 5a2d8f7f63055a548959e02e0684f32f, type: 3}
+  - {fileID: -183283915749202789, guid: b276a9ccbecc79d46b9e73c8907d1438, type: 3}
+  - {fileID: 1939309712503953591, guid: de5e91603c23ecc46a636b4a7f5d3d49, type: 3}

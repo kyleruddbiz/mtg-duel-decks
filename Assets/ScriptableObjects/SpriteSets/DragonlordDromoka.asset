@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b195f58aa328d664b996c04366724724, type: 3}
+  m_Name: DragonlordDromoka
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1415370411000915826, guid: dab1e815122652944bf9911c25200ee6, type: 3}
+  - {fileID: 5587993978405704658, guid: 6e52b24d71422bc478e699edb04ff49d, type: 3}

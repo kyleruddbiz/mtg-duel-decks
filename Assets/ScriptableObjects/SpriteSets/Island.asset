@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b195f58aa328d664b996c04366724724, type: 3}
+  m_Name: Island
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -8136222803899038104, guid: c429730d15dd52748a226b89f32504f3, type: 3}
+  - {fileID: 8191399821191571157, guid: 326b09294b6866847a9c49a06b23d130, type: 3}
+  - {fileID: 8230212329643125837, guid: bfed57cb58d3a72448b21899e1149a04, type: 3}
+  - {fileID: -2764838758940469117, guid: b0e662de18f14e64c8126fec298957bd, type: 3}
+  - {fileID: 4334756220822731279, guid: 967066da981911f43a0a19b73374573d, type: 3}
+  - {fileID: 9181725345549150454, guid: ba6e452cf83262b47b35b939c098a8d7, type: 3}
+  - {fileID: 7983777157525707432, guid: a830a1d7743bae24aa8df857a4ac7006, type: 3}
+  - {fileID: 4788887212493426822, guid: d556cb274625815428bbc47bbf02c4a5, type: 3}
+  - {fileID: -7722317025327048824, guid: 07460b1cd83d3e04ab8be45ecafcfd15, type: 3}
+  - {fileID: -7894472610280414312, guid: 534bbb2135995424bbd9d286af576564, type: 3}

@@ -47,6 +47,8 @@ namespace VoidScribe.MtgDuelDecks
 
         private void Start()
         {
+            if (cardData == null) throw new System.InvalidOperationException("CardData was not set on Card.");
+
             CardTraits = cardData.CardTraits;
         }
 

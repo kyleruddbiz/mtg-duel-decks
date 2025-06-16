@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b195f58aa328d664b996c04366724724, type: 3}
+  m_Name: ArchpriestOfShadows
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -3193259718222223732, guid: 5c7961f0b88dfa74d860abe06e5e62ad, type: 3}
+  - {fileID: 2695034635446995937, guid: 39f4d926cd6a5f8479994533daa3247c, type: 3}
