@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fcc9ad0829a797408b8adcd53a75f29, type: 3}
+  m_Name: ArchmageEmeritus
+  m_EditorClassIdentifier: 
+  <IsWip>k__BackingField: 1
+  <CardName>k__BackingField: Archmage Emeritus
+  <CardImages>k__BackingField: {fileID: 11400000, guid: 97acf8947f479e64b969f8c61eb1f69c, type: 2}
+  <ManaCost>k__BackingField:
+    colors: 34
+    <AmountGeneric>k__BackingField: 2
+    amountWhite: 0
+    amountBlue: 2
+    amountBlack: 0
+    amountRed: 0
+    amountGreen: 0
+  cardTypes: 4
+  <CardSuperTypes>k__BackingField: 0
+  <CardSubTypes>k__BackingField:
+  - {fileID: 11400000, guid: cdc79f991907c70458e32b03609de4c2, type: 2}
+  - {fileID: 11400000, guid: 1f3e63b6a9535ff498718d8a1986b309, type: 2}
+  <CardTraits>k__BackingField: 0
+  <Power>k__BackingField: 2
+  <Toughness>k__BackingField: 2
